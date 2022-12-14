@@ -1,0 +1,583 @@
+;; initial arkorder for the 2/23/07 demo.
+
+; startup
+'config/gen/band.dtb'
+'config/gen/macros.dtb'
+'config/gen/sfx_macros.dtb'
+'../../system/run/config/gen/macros.dtb'
+'../../system/run/band/gen/band_macros.dtb'
+'config/gen/xlast_macros.dtb'
+'config/gen/mem.dtb'
+'config/gen/allowed_chars.dtb'
+'config/gen/synth.dtb'
+'config/gen/spew.dtb'
+'ui/gen/ui.dtb'
+'ui/gen/init.dtb'
+'ui/gen/global.dtb'
+'ui/gen/cheats_funcs.dtb'
+'ui/gen/game.dtb'
+'ui/gen/track_panel.dtb'
+'ui/gen/mtv_overlay.dtb'
+'ui/gen/meta.dtb'
+'ui/gen/meta_loading.dtb'
+'ui/gen/main.dtb'
+'ui/gen/network_connect.dtb'
+'ui/gen/loading.dtb'
+'ui/gen/matchmaking.dtb'
+'ui/gen/matchmaking_band.dtb'
+'ui/gen/matchmaking_hth.dtb'
+'ui/gen/pause.dtb'
+'ui/gen/endgame.dtb'
+'ui/gen/performance_awards.dtb'
+'ui/gen/lose.dtb'
+'ui/gen/tour.dtb'
+'ui/gen/selsong.dtb'
+'ui/gen/tour_band.dtb'
+'ui/gen/tour_solo.dtb'
+'ui/gen/seltrack.dtb'
+'ui/gen/seldiff.dtb'
+'ui/gen/options.dtb'
+'ui/gen/options_audio.dtb'
+'ui/gen/training.dtb'
+ 
+'tutorial/gen/tutorial.dtb'
+'tutorial/globals/gen/vo.dtb'
+'tutorial/globals/gen/game.dtb'
+'tutorial/globals/gen/sync.dtb'
+'tutorial/globals/gen/labels.dtb'
+'tutorial/globals/gen/hud.dtb'
+'tutorial/globals/gen/tv.dtb'
+'tutorial/globals/gen/song.dtb'
+'tutorial/globals/gen/score.dtb'
+'tutorial/globals/gen/state.dtb'
+'tutorial/gen/tutorial_base.dtb'
+'tutorial/gen/tutorial_fail.dtb'
+'tutorial/gen/tutorial_pause.dtb'
+'tutorial/gen/tutorial_pause_mic.dtb'
+'tutorial/gen/tutorial_pause_controllers.dtb'
+'tutorial/gen/tutorial_loading.dtb'
+'tutorial/gen/tutorial_lesson_menu.dtb'
+'tutorial/gen/tutorial_state.dtb'
+'tutorial/gen/tutorial_events.dtb'
+'tutorial/gen/drum_tutorial.dtb'
+'tutorial/drums/basics/gen/intro.dtb'
+'tutorial/drums/basics/gen/thrash.dtb'
+'tutorial/drums/basics/gen/onehand.dtb'
+'tutorial/drums/basics/gen/twohands.dtb'
+'tutorial/drums/basics/gen/kick.dtb'
+'tutorial/drums/basics/gen/interface.dtb'
+'tutorial/drums/basics/gen/bre.dtb'
+'tutorial/drums/basics/gen/wrapup.dtb'
+'tutorial/drums/beat/gen/intro.dtb'
+'tutorial/drums/beat/gen/rockbeat.dtb'
+'tutorial/drums/beat/gen/part1.dtb'
+'tutorial/drums/beat/gen/part2.dtb'
+'tutorial/drums/beat/gen/part3.dtb'
+'tutorial/drums/beat/gen/combos.dtb'
+'tutorial/drums/beat/gen/deploy.dtb'
+'tutorial/drums/beat/gen/wrapup.dtb'
+'tutorial/gen/guitar_tutorial.dtb'
+'tutorial/guitar/basics/gen/intro.dtb'
+'tutorial/guitar/basics/gen/know.dtb'
+'tutorial/guitar/basics/gen/frets.dtb'
+'tutorial/guitar/basics/gen/notes.dtb'
+'tutorial/guitar/basics/gen/diff_notes.dtb'
+'tutorial/guitar/basics/gen/held_notes.dtb'
+'tutorial/guitar/basics/gen/chords.dtb'
+'tutorial/guitar/basics/gen/interface.dtb'
+'tutorial/guitar/basics/gen/bre.dtb'
+'tutorial/guitar/basics/gen/wrapup.dtb'
+'tutorial/guitar/medium/gen/intro.dtb'
+'tutorial/guitar/medium/gen/consecutive.dtb'
+'tutorial/guitar/medium/gen/combos.dtb'
+'tutorial/guitar/medium/gen/whammy.dtb'
+'tutorial/guitar/medium/gen/wail.dtb'
+'tutorial/guitar/medium/gen/solo.dtb'
+'tutorial/guitar/medium/gen/wrapup.dtb'
+'tutorial/guitar/advanced/gen/intro.dtb'
+'tutorial/guitar/advanced/gen/fingering.dtb'
+'tutorial/guitar/advanced/gen/strings.dtb'
+'tutorial/guitar/advanced/gen/hopos.dtb'
+'tutorial/guitar/advanced/gen/hopos_practice.dtb'
+'tutorial/guitar/advanced/gen/mixed.dtb'
+'tutorial/guitar/advanced/gen/wrapup.dtb'
+'tutorial/gen/vocals_tutorial.dtb'
+'tutorial/vocals/basics/gen/intro.dtb'
+'tutorial/vocals/basics/gen/singing.dtb'
+'tutorial/vocals/basics/gen/nonpitched.dtb'
+'tutorial/vocals/basics/gen/mechanics.dtb'
+'tutorial/vocals/basics/gen/rhythm.dtb'
+'tutorial/vocals/basics/gen/starpower.dtb'
+'tutorial/vocals/basics/gen/wrapup.dtb'
+
+; Round up any remaining tutorial files.
+(execute
+   {foreach $suffix (.dtb .milo _keep*.bmp _keep*.png .mogg .mid .xbv .xvocab .voc .vnn .usr)
+      {add_file "tutorial/&" $suffix}
+   }
+)
+
+'drum_trainer/gen/drum_trainer.dtb'
+'drum_trainer/gen/drum_trainer_menu.dtb'
+'drum_trainer/gen/drum_trainer_pause.dtb'
+'drum_trainer/gen/drum_trainer_base.dtb'
+'drum_trainer/gen/beats.dtb'
+'drum_trainer/gen/fills.dtb'
+'drum_trainer/gen/freestyle.dtb'
+
+; Round up any remaining drum trainer files.
+(execute
+   {foreach $suffix (.dtb .milo _keep*.bmp _keep*.png .mogg .mid .xbv .xvocab .voc .vnn .usr)
+      {add_file "drum_trainer/&" $suffix}
+   }
+)
+
+'ui/gen/practice.dtb'
+'ui/gen/shop.dtb'
+'ui/gen/charcreator.dtb'
+'patchcreator/gen/patchcreator.dtb'
+'ui/gen/tour_band_sel.dtb'
+'ui/gen/saveload.dtb'
+'ui/gen/saveload_xbox.dtb'
+'ui/gen/leaderboards.dtb'
+'ui/gen/invite_friends.dtb'
+'ui/gen/net_delegator.dtb'
+'ui/gen/stage_kit.dtb'
+'ui/framerate/gen/frame_rate.dtb'
+'ui/gen/band_ui_sink.dtb'
+'ui/gen/color_presets.dtb'
+'ui/gen/cam.dtb'
+'config/gen/attract.dtb'
+'config/gen/net.dtb'
+'config/gen/objects.dtb'
+'char/gen/char_objects.dtb'
+'config/gen/macros.dtb'
+'char/gen/char_face_exp.dtb'
+'char/gen/instruments.dtb'
+'char/gen/outfitloader.dtb'
+'world/gen/world_objects.dtb'
+'config/gen/macros.dtb'
+'world/gen/camera_cats.dtb'
+'world/gen/worldbase.dtb'
+'world/gen/world_validate.dtb'
+'world/gen/crowd.dtb'
+'ui/gen/ui_objects.dtb'
+'config/gen/macros.dtb'
+'config/gen/rnd_objects.dtb'
+'config/gen/macros.dtb'
+'config/gen/color_palette.dtb'
+'track/gen/track_objects.dtb'
+'track/gen/band_power_meter.dtb'
+'track/gen/crowd_meter.dtb'
+'track/gen/ending_bonus.dtb'
+'track/gen/failed_feedback.dtb'
+'track/gen/gem_smasher.dtb'
+'track/gen/gem_track.dtb'
+'track/gen/track_handlers.dtb'
+'ui/gen/global.dtb'
+'track/gen/head2head.dtb'
+'track/gen/hth_track_paneldir.dtb'
+'track/gen/particle_launcher.dtb'
+'track/gen/phrase_meter.dtb'
+'track/gen/player_feedback.dtb'
+'track/gen/player_intro.dtb'
+'track/gen/popup_help.dtb'
+'track/gen/scoreboard.dtb'
+'track/gen/smasher_plate.dtb'
+'track/gen/star_meter_multiplier.dtb'
+'track/gen/streak_meter.dtb'
+'track/gen/tambourine_gem.dtb'
+'track/gen/track_paneldir.dtb'
+'track/gen/vignette.dtb'
+'track/gen/vocals.dtb'
+'track/gen/track_handlers.dtb'
+'config/gen/crowd_audio.dtb'
+'config/gen/cheats.dtb'
+'config/gen/long_cheats.dtb'
+'config/gen/beatmatcher.dtb'
+'config/gen/beatmatch_controller.dtb'
+'config/gen/midi_parsers.dtb'
+'../../system/run/config/gen/beatmatch.dtb'
+'config/gen/game.dtb'
+'config/gen/modes.dtb'
+'config/gen/player.dtb'
+'config/gen/player_net.dtb'
+'config/gen/scoring.dtb'
+'config/gen/star_thresholds.dtb'
+'config/gen/achievements.dtb'
+'config/gen/track_graphics.dtb'
+'config/gen/sound.dtb'
+'tutorial/gen/tutorial_vo.dtb'
+'config/gen/tour.dtb'
+'config/gen/tour_band.dtb'
+'config/gen/tour_solo.dtb'
+'config/gen/characters.dtb'
+'ui/framerate/gen/characters.dtb'
+'config/gen/tips.dtb'
+'config/gen/loading_screens.dtb'
+'config/gen/videos.dtb'
+'../../system/run/config/gen/default.dtb'
+'../../system/run/config/gen/macros.dtb'
+'../../system/run/config/gen/objects.dtb'
+'../../system/run/config/gen/rnd_objects.dtb'
+'../../system/run/config/gen/synth_objects.dtb'
+'../../system/run/char/gen/char_objects.dtb'
+'../../system/run/ui/gen/ui_objects.dtb'
+'../../system/run/track/gen/track_objects.dtb'
+'../../system/run/world/gen/world_objects.dtb'
+'../../system/run/band/gen/band_objects.dtb'
+'../../system/run/band/gen/band_macros.dtb'
+'../../system/run/config/gen/joypad.dtb'
+'../../system/run/config/gen/scratcher.dtb'
+'../../system/run/config/gen/rnd_font.dtb'
+'../../system/run/config/gen/cheat_init.dtb'
+'../../system/run/config/gen/charsys.dtb'
+'ui/eng/gen/locale_milo.dtb'
+'ui/eng/gen/locale.dtb'
+'ui/eng/gen/locale_venues.dtb'
+'ui/eng/gen/locale_events.dtb'
+'ui/eng/gen/locale_rockmoments.dtb'
+'ui/eng/gen/locale_clothing.dtb'
+'ui/eng/gen/locale_patch.dtb'
+'ui/eng/gen/locale_tour.dtb'
+
+; generated shader list
+
+#ifdef HX_XBOX
+'xbox_shaders'
+#endif
+
+#ifdef HX_PS3
+'ps3_shaders'
+#endif
+
+'ui/gen/startup_esrb.milo'
+'sfx/gen/common_bank.milo'
+'sfx/gen/audio_mixer.milo'
+'track/gen/track_shared.milo'
+'sfx/gen/ingame_bank.milo'
+'ui/gen/startup_mtv.milo'
+'../../system/run/world/gen/black8x8_keep.bmp'
+'../../system/run/world/gen/white8x8_keep.bmp'
+'ui/gen/startup_harmonix.milo'
+
+(execute
+   {add_file "patchcreator/&_keep*.png"}
+   {add_file "patchcreator/&_keep*.bmp"}
+   {add_file "patchcreator/&.milo"}
+)
+
+; basic band coop flow
+
+'ui/gen/startup_ea.milo'
+'ui/gen/tour_band_default_logo.milo'
+'ui/gen/mixer_parent.milo'
+'ui/gen/meta_loading.milo'
+'ui/resource/gen/avantgarde.milo'
+'ui/gen/pause.milo'
+'ui/resource/gen/instrument_icons.milo'
+'ui/resource/gen/fakir_black.milo'
+'ui/gen/pause_mics.milo'
+'ui/resource/gen/chalet1980.milo'
+'ui/resource/gen/fakir_regular.milo'
+'ui/gen/helpbar.milo'
+'ui/gen/helpbar_common.milo'
+'ui/resource/gen/buttons.milo'
+'ui/resource/gen/kabel_bold.milo'
+'ui/gen/dialog.milo'
+'ui/gen/dialog_common.milo'
+'ui/resource/gen/bodoni.milo'
+'ui/gen/event_dialog.milo'
+'ui/gen/lose.milo'
+'ui/gen/qp_endgame.milo'
+'ui/gen/endgame_common.milo'
+'ui/resource/gen/stars.milo'
+'ui/resource/gen/chalet1970numbers.milo'
+'ui/gen/tour_endgame.milo'
+'ui/gen/tour_solo_endgame.milo'
+'ui/gen/qp_hth_endgame.milo'
+'ui/resource/gen/baroque.milo'
+'ui/gen/qp_hth_tow_endgame.milo'
+'ui/gen/network_busy_icon.milo'
+'ui/gen/remote_member_available.milo'
+'ui/gen/content_loading.milo'
+'ui/gen/fx_widescreen.milo'
+'ui/movies/256/movie_15_(lightclutter5).xbv'
+'ui/movies/256/movie_09_(flash12).xbv'
+'ui/movies/256/movie_17_(lightleak1).xbv'
+'sfx/gen/metagame_bank.milo'
+'ui/gen/meta_panel.milo'
+'ui/gen/splash.milo'
+'ui/gen/vinette.milo'
+
+'songs/gen/songs.dtb'
+'tour/gen/rome.dtb'
+'tour/gen/stockholm.dtb'
+'tour/gen/rio.dtb'
+'tour/gen/berlin.dtb'
+'tour/gen/sanfrancisco.dtb'
+'tour/gen/london.dtb'
+'tour/gen/paris.dtb'
+'tour/gen/boston.dtb'
+'tour/gen/moscow.dtb'
+'tour/gen/amsterdam.dtb'
+'tour/gen/reykjavik.dtb'
+'tour/gen/tokyo.dtb'
+'tour/gen/losangeles.dtb'
+'tour/gen/seattle.dtb'
+'tour/gen/chicago.dtb'
+'tour/gen/sydney.dtb'
+'tour/gen/newyork.dtb'
+'ui/gen/attract_overlay.milo'
+
+; Movie
+
+'ui/gen/main.milo'
+'ui/gen/main_lower3rd.milo'
+'ui/gen/main_ticker.milo'
+'ui/gen/main_ticker_render.milo'
+'ui/gen/fakir_black_outline.milo'
+'ui/gen/main_bandcoop.milo'
+'ui/gen/tour_hub_bg.milo'
+'ui/gen/matchmaking_bg.milo'
+'ui/gen/chalet_trace_fill.milo'
+'ui/gen/matchmaking_char.milo'
+'ui/gen/matchmaking.milo'
+'ui/gen/matchmaking_player_common.milo'
+'ui/gen/matchmaking_player.milo'
+'ui/gen/fakir_black.milo'
+'ui/gen/chalet_dropshadow.milo'
+'ui/gen/stars.milo'
+'ui/gen/chalet_reverse_dropshadow.milo'
+'../../system/run/ui/gen/list.milo'
+'../../system/run/ui/gen/common.milo'
+'ui/gen/matchmaking_player.milo'
+'ui/gen/matchmaking_player.milo'
+'ui/gen/matchmaking_player.milo'
+'ui/gen/qp_selsong.milo'
+'ui/gen/qp_selsong_render.milo'
+'ui/gen/list_song.milo'
+'ui/gen/fakir_regular.milo'
+'ui/gen/seldiff.milo'
+'ui/gen/main_lower3rd.milo'
+'ui/gen/seldiff_player.milo'
+'ui/gen/fakir_black_italic.milo'
+'ui/gen/stars.milo'
+'ui/gen/seldiff_player.milo'
+'ui/gen/seldiff_player.milo'
+'ui/gen/seldiff_player.milo'
+'ui/gen/chalet_trace.milo'
+
+; game loading sequence
+
+'ui/gen/loading.milo'
+'ui/gen/loading_instrument.milo'
+'ui/gen/loading_photo.milo'
+'sfx/gen/ingame_bank.milo'
+'sfx/gen/song_default_bank.milo'
+
+'ui/gen/fakir_black_outline.milo'
+
+; Round up any remaining UI files.
+(execute
+   {add_file "ui/&.milo"}
+   {add_file "ui/&_keep*.png"}
+   {add_file "ui/&_keep*.bmp"}
+)
+
+; Songs
+(execute
+   ; add the right extension for each song
+   ; @TODO get the ext order right.
+   {foreach $song {get_dirs "songs/*"}
+      {foreach $ext (xvocab vnn usr mid voc bin mogg)
+         {add_file "songs/" $song "/&." $ext}
+      }
+   }
+)
+
+
+; Crowd Characters
+
+; Crowd animations   
+'char/crowd/anims/gen/crowd_male_main.milo'
+'char/crowd/anims/gen/crowd_female_main.milo'
+
+(execute
+
+   {foreach $a ('01' '02' '03' '04' '05' '06' '07' '08')
+      {add_file "char/crowd/gen/crowd_female" $a ".milo"}
+   }
+   
+   {foreach $a ('01' '02' '03' '04' '05' '06' '07' '08')
+      {add_file "char/crowd/gen/crowd_male" $a ".milo"}
+   }
+      
+   ; Venues
+
+   ; put variants first
+   ; Then base
+   ; Then lighting
+   ; Then char
+   ; Then geom
+   ; Then bank
+   
+   
+   ; start by adding everything 
+   ; then pulling out the things we care about.
+   {replace_order TRUE}
+   {add_file "world/&.milo"}
+   {add_file "world/&.xbv"}   
+
+   {foreach $venue (arena big_club small_club theater blank)
+      ; add the variants.
+      {foreach $variant {get_dirs "world/" $venue "/*"}
+         ; screen out gen and textures and all that.
+         {if {has_substr $variant $venue}
+            {add_file "world/" $venue "/" $variant "/gen/" $variant ".milo"}
+         }
+      }
+      ; add the rest.
+      {foreach $suffix ("" "_lighting" "_char" "_geom" "_bank")
+         {add_file "world/" $venue "/gen/" $venue $suffix ".milo"}
+      }
+   }
+   {replace_order FALSE}
+)   
+
+(execute {replace_order TRUE})
+; From analysis of venues -- Ike
+
+; Crowd streams
+'world/arena/streams/crowd_arena_danger.mogg'
+'world/arena/streams/crowd_arena_poor.mogg'
+'world/arena/streams/crowd_arena_norm.mogg'
+'world/arena/streams/crowd_arena_good.mogg'
+'world/arena/streams/crowd_arena_peak.mogg'
+'world/big_club/streams/crowd_big_danger.mogg'
+'world/big_club/streams/crowd_big_poor.mogg'
+'world/big_club/streams/crowd_big_norm.mogg'
+'world/big_club/streams/crowd_big_good.mogg'
+'world/big_club/streams/crowd_big_peak.mogg'   
+'world/small_club/streams/crowd_small_danger.mogg'
+'world/small_club/streams/crowd_small_poor.mogg'
+'world/small_club/streams/crowd_small_norm.mogg'
+'world/small_club/streams/crowd_small_good.mogg'
+'world/small_club/streams/crowd_small_peak.mogg'
+'world/theater/streams/crowd_theater_danger.mogg'
+'world/theater/streams/crowd_theater_poor.mogg'
+'world/theater/streams/crowd_theater_norm.mogg'
+'world/theater/streams/crowd_theater_good.mogg'
+'world/theater/streams/crowd_theater_peak.mogg'
+
+'world/shared/gen/bandlogo_target.milo'
+'sfx/gen/tambourine_bank.milo'
+'sfx/gen/kit01_bank.milo'
+
+; common start for all venues
+'world/shared/bandlogo_target.milo'
+'world/shared/fx/post_process_fx.milo'
+'world/shared/fx/render_to_texture_fx/fog.milo'
+'world/shared/props/clutter/tape_x.milo'
+'world/shared/amps/monitor_twin.milo'
+'world/shared/props/decals/square_decal.milo'
+'world/shared/fx/backlight/twirl.milo'
+'world/shared/props/clutter/tape_monitor.milo'
+'world/shared/props/decals/round_decal.milo'
+'world/shared/props/lightrig/light_blinder01.milo'
+'world/shared/fx/lighttarget/lighttarget.milo'
+'world/shared/fx/lighttarget/lighttarget_clips_base_pos.milo'
+'world/shared/fx/lighttarget/lighttarget_clips_base_rot.milo'
+'world/shared/fx/lighttarget/lighttarget_clips_target.milo'
+'world/shared/fx/lighttarget/lighttarget_clips_base.milo'
+'world/shared/text_3d/text_area51_beveled.milo'
+
+(execute {replace_order FALSE})
+
+; Track + Hud assets, need to load pretty fast.
+
+
+'track/gen/trackpanel.milo'
+'ui/gen/chalet_comprime_1980.milo'
+'track/gen/vocals.milo'
+'track/gen/tambourine_gem.milo'
+'track/gen/phrase_meter.milo'
+'track/gen/scream_meter.milo'
+'track/gen/band_power_meter_vocals.milo'
+'track/gen/streak_meter.milo'
+'track/gen/streak_meter_light.milo'
+'track/gen/streak_meter_light.milo'
+'track/gen/streak_meter_light.milo'
+'ui/gen/chalet-newyorknineteeneighty.milo'
+'track/gen/scoreboard.milo'
+'track/gen/star_meter_multiplier.milo'
+'track/gen/crowd_meter.milo'
+'ui/gen/fakir_black.milo'
+'track/gen/ending_bonus.milo'
+'track/gen/vignette.milo'
+'track/gen/cumalative_experience_odometer.milo'
+'track/gen/tracksystem.milo'
+'track/gen/band_power_meter.milo'
+'track/gen/spotlight_phrase_sucess.milo'
+'track/gen/streak_meter.milo'
+'track/gen/streak_meter_light.milo'
+'track/gen/streak_meter_light.milo'
+'track/gen/streak_meter_light.milo'
+'track/gen/guitarsolo_feedback.milo'
+'track/gen/tracksystem.milo'
+'track/gen/band_power_meter.milo'
+'track/gen/spotlight_phrase_sucess.milo'
+'track/gen/streak_meter.milo'
+'track/gen/streak_meter_light.milo'
+'track/gen/streak_meter_light.milo'
+'track/gen/streak_meter_light.milo'
+'track/gen/guitarsolo_feedback.milo'
+'hud/gen/coop_streak_display.milo'
+'track/gen/tracksystem.milo'
+'track/gen/band_power_meter.milo'
+'track/gen/spotlight_phrase_sucess.milo'
+'track/gen/streak_meter.milo'
+'track/gen/streak_meter_light.milo'
+'track/gen/streak_meter_light.milo'
+'track/gen/streak_meter_light.milo'
+'track/gen/guitarsolo_feedback.milo'
+
+'ui/gen/mtv_overlay.milo'
+'ui/gen/kabel_bold.milo'
+
+; Round up any track stragglers
+(execute 
+   {add_file "track/&.milo"}
+   {add_file "track/&_keep*.bmp"}
+   {add_file "track/&_keep*.png"}
+)
+
+; Character stuff
+; Charaters must go last for maxmimum speed on disk.
+(execute
+
+   ; Start by rounding everything up, then pull out what we want.
+   {replace_order TRUE}
+   {add_file "char/gen/*.milo"}
+
+   ; Character Base models
+   {foreach $gender (male female)
+      {add_file "char/" $gender "/gen/*.milo"}
+   }
+
+   ; Character animations
+   {foreach $gender (male female)
+      {add_file "char/" $gender "/anim/&/*.milo"}
+   }
+   
+   ; Instruments
+   {add_file "char/instruments/&/*.milo"}
+   
+   ; Character outfits
+   {foreach $gender (male female)
+      {foreach $outfit (hair heads eyes lips facehair glasses wrist torso hands legs feet rings earrings)
+         {add_file "char/" $gender "/outfits/" $outfit "/&/*.milo"}
+      }
+   }
+   {replace_order FALSE}   
+)
