@@ -1,0 +1,13 @@
+_build/xbox/gen/main*
+_xenia/cache/*
+_xenia/content/45410914/00000001/band3/save.dat
+_xenia/content/45410914/00000001/globaloptions/globaloptions
+_xenia/content/45410914/00000001/songcache/songcache
+_xenia/content/45410914/Headers/*
+_xenia/xenia.log
+_build_xbox - Copy.bat
+_xenia/content/45410914/00000001/RB1DISCCUSTOMPACKWITHUNEXPORTABLES
+_xenia/content/45410914/00000002/*
+_xenia/content/45410914/00000001/*
+_xenia/content/45410829/00000002/*
+_xenia/content/45410829/00000001/*
