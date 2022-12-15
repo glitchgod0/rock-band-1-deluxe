@@ -2809,7 +2809,7 @@
 #endif
 #ifdef HX_XBOX
 (shell_press_start_to_rock
-   "PRESS START")
+   " ")
 (game_online_tour
    "Xbox LIVE Tour")
 #endif
