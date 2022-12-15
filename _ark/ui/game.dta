@@ -57,6 +57,7 @@
          (script
             {handle
                ($this intro_end)})}
+      {world_panel set_showing {! $blackbg}}
       kDataUnhandled)
    (intro_skip
       {$this start_game}
@@ -275,7 +276,15 @@
             {profile_mgr update_vocal_volume $player_num}
             {profile_mgr update_mic_gain $player_num}}}
       {handle
-         ($this my_enter)})
+         ($this my_enter)}
+      {$this milo_setup})
+(milo_setup
+;setup for venue fps
+     {if {!= $emulatefps 24} {{$world iterate PostProc $p {$p set emulate_fps $emulatefps}}}
+     {if {>= {$emulatefps 25} {$char iterate CharHair $hair {$hair reset 35}}
+     {$world iterate WorldDir $wd {$wd iterate BandCamShot $bcs
+     {foreach $property (shake_noisefreq shake_noiseamp) {$bcs set (keyframes $i $property) {'*' {$bcs get (keyframes $i $property)} 0.25}}}
+      {foreach $component (x y) {$bcs set (keyframes $i shake_maxangle $component) {'*' {$bcs get (keyframes $i shake_maxangle $component)} 0.25}}}}}}}})
    (exit
       {session remove_sink $this start_game_msg}
       {session remove_sink $this start_loading_msg}

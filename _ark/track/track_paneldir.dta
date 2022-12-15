@@ -769,8 +769,8 @@
          (drum FALSE)
          (guitar FALSE)
          (vocals FALSE)
-         (view_time_easy 2.4)
-         (view_time_expert 1.5)
+         (view_time_easy {/ 2.4 $trackspeed})
+         (view_time_expert {/ 1.5 $trackspeed})
          (net_track_alpha 0.3)
          (configuration 1_player_regular)
          (configurable_objects

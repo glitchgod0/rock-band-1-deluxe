@@ -36,6 +36,22 @@
 #ifndef _SHIP
 #include framerate/frame_rate.dta
 #endif
+
+;sets default track speed. 1.15 is 115%, 1.30 is 130% and so on.
+{set $trackspeed 1.0}
+
+;sets default song speed 1.15 is 115%, 1.30 is 130% and so on.
+{set $speedmod 1.0}
+
+;set default venue fps.
+{set $emulatefps 24}
+
+;no venues
+{set $blackbg FALSE}
+
+;nofail
+{set $nofail FALSE}
+
 {mixer_panel load}
 {platform_mgr set_notify_ui_location kOSNotifyBottomCenter}
 {set $saveload_skip_upload FALSE}

@@ -1,3 +1,15 @@
+(milosliderlbl
+   "Speed / Framerate")
+(speed_msg
+   "SONG SPEED: %d%%")
+(trackspeed_msg
+   "NOTE SPEED: %d%%")
+(fps_msg
+   "VENUE FRAMERATE: %dFPS")
+(blackbg "Disable Venues")
+(nofail "No Fail")
+(gameplay_options "Gameplay Options")
+;;;;;
 (store_cache_name
    "Rock Band Music Store Data")
 (song_info_cache_name

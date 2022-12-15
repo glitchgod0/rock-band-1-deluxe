@@ -82,8 +82,8 @@
          (first_solo_points 0)
          (gem_tracks
             ())
-         (view_time_easy 2.4)
-         (view_time_expert 1.5)
+         (view_time_easy {/ 2.4 $trackspeed})
+         (view_time_expert {/ 1.5 $trackspeed})
          (net_track_alpha 0.3)
          (next_surface
             ($val)
