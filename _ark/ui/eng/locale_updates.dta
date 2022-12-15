@@ -168,7 +168,7 @@
    "While the HDD access indicator is flashing, data is being saved. Do not switch off the power during this time.")
 #else
 (export_welcome_msg
-   "Song sExporting allows you to make a copy of the songs included on the Rock Band disc for use in future Rock Band titles.\n\nCopying these songs will take up 1.52 GB on your storage device. You can delete specific songs from your Xbox 360 console after the copy has taken place.")
+   "Song Exporting allows you to make a copy of the songs included on the Rock Band disc for use in future Rock Band titles.\n\nCopying these songs will take up 1.52 GB on your storage device. You can delete specific songs from your Xbox 360 console after the copy has taken place.")
 (export_license_needed_msg
    "Rock Band allows you to export many of your Rock Band disc songs for use in future Rock Band titles. In order to export the songs from the Rock Band disc you need to purchase an export license key.  After this personal and nontransferable license key is purchased and downloaded, the song export process will begin automatically.  Once the songs have been exported they will be visible in the song select list on future Rock Band titles.")
 (export_success_msg
