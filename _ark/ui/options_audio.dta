@@ -345,8 +345,6 @@
       {background_music.btn set_localized {sprintf {localize speed_msg} {int {+ 0.5 {* $speedmod 100}}}}} ;set song speed msg
       {crowd.btn set_localized {sprintf {localize fps_msg} {int $emulatefps}}} ;set venue fps msg
       {doubly.btn set_localized {localize nofail}}
-      {doubly.btn set_showing FALSE}
-      {$this disable doubly.btn}
       {bass_boost.btn set_localized {localize blackbg}}
       {$this update_all_from_profile}
       {session add_sink $this signin_changed}
