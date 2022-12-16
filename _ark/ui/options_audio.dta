@@ -699,7 +699,7 @@
             {profile_mgr
                update_vocal_volume
                [player_num]})
-         (crowd.sld
+         (vocal_track.sld
             {profile_mgr
                set_vocal_cue_volume
                {$component current}})})
@@ -728,7 +728,7 @@
                      get_char_options_from_player
                      [player_num]}
                   get_vocal_volume}})
-         (crowd.sld
+         (vocal_track.sld
             {$component
                set_current
                {profile_mgr get_vocal_cue_volume}})})
