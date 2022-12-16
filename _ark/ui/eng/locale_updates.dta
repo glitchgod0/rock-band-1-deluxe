@@ -6,6 +6,10 @@
    "NOTE SPEED: %d%%")
 (fps_msg
    "VENUE FRAMERATE: %dFPS")
+(choke_solo 
+   "Awesome Choke!")
+(nice_solo
+   "Nice")
 (blackbg "Disable Venues")
 (nofail "No Fail")
 (gameplay_options "Gameplay Options")
