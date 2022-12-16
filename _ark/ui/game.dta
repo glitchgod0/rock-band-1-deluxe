@@ -59,6 +59,7 @@
                ($this intro_end)})}
       {world_panel set_showing {! $blackbg}}
       kDataUnhandled)
+   (on_extend {world_panel set_showing {! $blackbg}} kDataUnhandled)
    (intro_skip
       {$this start_game}
       kDataUnhandled)

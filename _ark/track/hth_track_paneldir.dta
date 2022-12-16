@@ -82,8 +82,8 @@
          (first_solo_points 0)
          (gem_tracks
             ())
-         (view_time_easy {/ 2.4 $trackspeed})
-         (view_time_expert {/ 1.5 $trackspeed})
+         ;(view_time_easy 2.4)
+         ;(view_time_expert 1.5)
          (net_track_alpha 0.3)
          (next_surface
             ($val)
@@ -390,13 +390,7 @@
                {/= $average_difficulty kDifficultyExpert}
                {do
                   ($view_time
-                     {'+'
-                        [view_time_easy]
-                        {'*'
-                           $average_difficulty
-                           {-
-                              [view_time_expert]
-                              [view_time_easy]}}})
+                     {'*' {/ 1.5 $trackspeed} $speedmod})
                   {track_0
                      set
                      y_per_second
