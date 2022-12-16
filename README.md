@@ -20,7 +20,7 @@ You can setup git with all default options, same with dot net.
 
 Once the dependencies are installed, run "_init_repo.bat" in an **empty folder**. git will pull the repo and make sure you are completely up to date.
 
-Copy your base game Rock Band 1 main.hdr and ark files to "_build/Xbox".
+Copy your base game Rock Band 1 main.hdr and ark files to "_build/Xbox/gen".
 
 From then on simply run "_build_xbox.bat". This script will pull the repo again for updates, and build the ARK for you and spit it out in _build/Xbox
 
