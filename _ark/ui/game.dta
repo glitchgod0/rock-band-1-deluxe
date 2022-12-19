@@ -58,6 +58,7 @@
             {handle
                ($this intro_end)})}
       {world_panel set_showing {! $blackbg}}
+      {if $blackbg {$world iterate PostProc $p {$p set emulate_fps 1}}}
       kDataUnhandled)
    (on_extend {world_panel set_showing {! $blackbg}} kDataUnhandled)
    (intro_skip
@@ -285,7 +286,7 @@
      {if {>= {$emulatefps 25} {$char iterate CharHair $hair {$hair reset 35}}
      {$world iterate WorldDir $wd {$wd iterate BandCamShot $bcs
      {foreach $property (shake_noisefreq shake_noiseamp) {$bcs set (keyframes $i $property) {'*' {$bcs get (keyframes $i $property)} 0.25}}}
-      {foreach $component (x y) {$bcs set (keyframes $i shake_maxangle $component) {'*' {$bcs get (keyframes $i shake_maxangle $component)} 0.25}}}}}}}})
+     {foreach $component (x y) {$bcs set (keyframes $i shake_maxangle $component) {'*' {$bcs get (keyframes $i shake_maxangle $component)} 0.25}}}}}}}})
    (exit
       {session remove_sink $this start_game_msg}
       {session remove_sink $this start_loading_msg}
