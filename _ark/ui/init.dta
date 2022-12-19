@@ -37,6 +37,9 @@
 #include framerate/frame_rate.dta
 #endif
 
+;disable crowd sfx
+{set $nocrowd FALSE}
+
 ;sets default track speed. 1.15 is 115%, 1.30 is 130% and so on.
 {set $trackspeed 1.0}
 

@@ -327,7 +327,7 @@
    UIPanel
    options_milo_panel
    (file
-      "options_audio.milo")
+      "options_audio_ps3.milo")
    (focus instruments.btn)
    (signin_change_waiting FALSE)
    (load
@@ -335,6 +335,8 @@
    (is_loaded
       {content_mgr refresh_done})
    (enter
+      {mono.btn set_showing TRUE}
+      {$this enable mono.btn}
       {instruments.sld set_num_steps 41} ;number of steps for note speed slider
       {background.sld set_num_steps 31} ;number of steps for song speed slider
       {crowd.sld set_num_steps 60} ;number of steps for venue fps slider
@@ -346,6 +348,7 @@
       {crowd.btn set_localized {sprintf {localize fps_msg} {int $emulatefps}}} ;set venue fps msg
       {doubly.btn set_localized {localize nofail}}
       {bass_boost.btn set_localized {localize blackbg}}
+      {mono.btn set_localized {localize nocrowd}}
       {$this update_all_from_profile}
       {session add_sink $this signin_changed}
       {memcardmgr add_sink $this save_load_all_complete_msg}
@@ -392,7 +395,7 @@
             {helpbar
                set_config
                (helpbar_cancel helpbar_confirmsetting)})
-         ((bass_boost.btn doubly.btn)
+         ((bass_boost.btn doubly.btn mono.btn)
             {$this update_check_help $new_focus})})
    (SCROLL_SELECT_MSG
       {if_else
@@ -410,17 +413,13 @@
       {switch
          $component
          (bass_boost.btn
-            {if_else $blackbg
-            {set $blackbg FALSE}
-            {set $blackbg TRUE}}
+            {set $blackbg {! $blackbg}}
                {$this
                   update_from_profile
                   {$this find bass_check.mesh}}
                {$this update_check_help $component})
          (doubly.btn
-            {if_else $nofail
-            {set $nofail FALSE}
-            {set $nofail TRUE}}
+            {set $nofail {! $nofail}}
                {$this
                   update_from_profile
                   {$this find doubly_check.mesh}}
@@ -440,18 +439,13 @@
          (sfx.btn
             {sfx.sld store}
             {$this set_focus sfx.sld})
-         #ifdef HX_PS3
          (mono.btn
-            {do
-               ($new_state
-                  {!
-                     {profile_mgr get_mono}})
-               {profile_mgr set_mono $new_state}
+            {set $nocrowd {! $nocrowd}}
                {$this
                   update_from_profile
                   {$this find mono_check.mesh}}
-               {$this update_check_help $component}})
-         #endif})
+               {$this update_check_help $component})
+         })
    (BUTTON_DOWN_MSG
       {switch
          {$this focus_name}
@@ -521,11 +515,12 @@
          (crowd.sld
                {do {set $component current}}
                {$this set_speeds})
-         (sfx.sld
-            {profile_mgr
-               set_fx_volume
-               {$component current}}
-            {play_game_seq slider_sfx.cue})})
+         ;(sfx.sld
+         ;   {profile_mgr
+         ;      set_fx_volume
+         ;      {$component current}}
+         ;   {play_game_seq slider_sfx.cue})
+         })
    (update_all_from_profile
       {$this
          iterate
@@ -538,11 +533,9 @@
       {$this
          update_from_profile
          {$this find doubly_check.mesh}}
-      #ifdef HX_PS3
       {$this
          update_from_profile
-         {$this find mono_check.mesh}}
-      #endif)
+         {$this find mono_check.mesh}})
    (update_from_profile
       ($component)
       {switch
@@ -571,12 +564,11 @@
             {{$this find doubly_check.mesh}
                set_showing
                $nofail})
-         #ifdef HX_PS3
          (mono_check.mesh
             {{$this find mono_check.mesh}
                set_showing
-               {profile_mgr get_mono}})
-         #endif})
+               $nocrowd})
+         })
    (update_check_help
       ($component)
       {switch
@@ -589,12 +581,11 @@
             {helpbar
                set_config
                (helpbar_back helpbar_toggleoption)})
-         #ifdef HX_PS3
          (mono.btn
             {helpbar
                set_config
                (helpbar_back helpbar_toggleoption)})
-         #endif})
+         })
    (SIGNIN_CHANGED_MSG
       {if_else
          {==

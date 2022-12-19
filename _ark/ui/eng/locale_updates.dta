@@ -13,6 +13,7 @@
 (blackbg "Disable Venues")
 (nofail "No Fail")
 (gameplay_options "Gameplay Options")
+(nocrowd "No Crowd SFX")
 ;;;;;
 (store_cache_name
    "Rock Band Music Store Data")
