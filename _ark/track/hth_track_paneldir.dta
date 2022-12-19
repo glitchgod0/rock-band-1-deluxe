@@ -390,7 +390,7 @@
                {/= $average_difficulty kDifficultyExpert}
                {do
                   ($view_time
-                     {'*' {/ 1.5 $trackspeed} $speedmod})
+                     {'*' {/ 1 $trackspeed} $speedmod})
                   {track_0
                      set
                      y_per_second

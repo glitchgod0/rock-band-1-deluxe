@@ -1159,7 +1159,7 @@
                   {/= $average_difficulty kDifficultyExpert}}
                {do
                   ($view_time
-                     {'*' {/ 1.5 $trackspeed} $speedmod})
+                     {'*' {/ 1.25 $trackspeed} $speedmod})
                   {foreach_int
                      $i
                      0
