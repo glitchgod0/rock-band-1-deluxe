@@ -5,7 +5,7 @@
 (trackspeed_msg
    "NOTE SPEED: %d%%")
 (fps_msg
-   "VENUE FRAMERATE: %dFPS")
+   "VENUE FPS: %dFPS")
 (choke_solo 
    "Awesome Choke!")
 (nice_solo

@@ -337,6 +337,8 @@
    (enter
       {mono.btn set_showing TRUE}
       {$this enable mono.btn}
+      {vocal_options.btn get_local_pos $labelpos_x $labelpos_y $labelpos_z}
+      {vocal_options.btn set_local_pos {+ $labelpos_x 75} $labelpos_y $labelpos_z}
       {instruments.sld set_num_steps 41} ;number of steps for note speed slider
       {background.sld set_num_steps 31} ;number of steps for song speed slider
       {crowd.sld set_num_steps 60} ;number of steps for venue fps slider
