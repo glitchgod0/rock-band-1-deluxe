@@ -1,5 +1,7 @@
 # Rock-Band-1-Deluxe
 
+![Header Image](dependencies/header.png)
+
 ## Introduction
 
 This Repo contains everything you need to build an ark for Rock Band 1 Deluxe for Xbox 360.
