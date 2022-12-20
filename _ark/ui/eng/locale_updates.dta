@@ -14,6 +14,8 @@
 (nofail "No Fail")
 (gameplay_options "Gameplay Options")
 (nocrowd "No Crowd SFX")
+(os_dxsettings "DELUXE SETTINGS")
+(os_speed "Speed Settings")
 ;;;;;
 (store_cache_name
    "Rock Band Music Store Data")

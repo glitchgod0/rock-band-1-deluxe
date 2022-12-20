@@ -1,0 +1,39 @@
+{new
+   UIPanel
+   overshell_lower3rd_panel
+   (file
+      "practice_lower3rd.milo")}
+{new
+   MultiSelectListPanel
+   overshell_main_panel
+   (file practice_sel_section.milo)
+   (focus sel_section.lst)
+   (enter
+      {sel_section.lst set_data (os_speed)}
+      {title.lbl
+         set_localized {localize os_dxsettings}}
+      {$this pause_if_local}
+      {bar_05.mesh set_showing FALSE}
+      {bar_06.mesh set_showing FALSE}
+      {bar_07.mesh set_showing FALSE})
+   (exit)
+   (SELECT_START_MSG
+   {switch {$component selected_sym}
+      (os_speed
+         {ui push_screen options_milo_screen})})
+   (SCROLL_MSG)
+   (BUTTON_DOWN_MSG
+      {if {== $button kPad_Tri}
+         {if_else {exists $modifier_exit}
+            {ui goto_screen $modifier_exit}
+            {ui goto_screen splash_screen}
+         }
+         {ui pop_screen}
+      }
+      kDataUnhandled
+      )}
+{new
+   UIScreen
+   overshell_main_screen
+   (panels overshell_main_panel options_lower3rd_panel)
+   (focus overshell_main_panel)}

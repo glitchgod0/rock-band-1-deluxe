@@ -361,10 +361,12 @@
       {gamertag.lbl set_showing FALSE}
       {instrument.lbl set_showing FALSE}
       {audio_options.lbl set_localized {localize milosliderlbl}}
-      {vocal_options.btn set_localized {localize gameplay_options}}
+      ;{vocal_options.btn set_localized {localize gameplay_options}} ; no longer needed as gameplay is back in it's original place
       {sfx.btn set_showing FALSE}
       {$this disable sfx.btn}
-      {sfx.sld set_showing FALSE})
+      {sfx.sld set_showing FALSE}
+      {$this disable vocal_options.btn}
+      {vocal_options.btn set_showing FALSE})
    (display_trackspeed_msg
       ($tspd)
       {instruments.btn set_localized {sprintf {localize trackspeed_msg} {int {+ 0.5 {* $tspd 100}}}}})
@@ -375,11 +377,7 @@
       ($fps)
      {crowd.btn set_localized {sprintf {localize fps_msg} {int $fps}}}) ;don't add 1 here because this is being fed the actual fps
    (exit
-      {song_preview ''}
-      {meta music_start}
-      {session remove_sink $this signin_changed}
-      {memcardmgr remove_sink $this save_load_all_complete_msg}
-      {helpbar set_limit_to_player_num -1})
+      {ui pop_screen})
    (save_load_all_complete_msg
       {$this update_all_from_profile})
    (FOCUS_MSG
@@ -608,9 +606,9 @@
 {new
    UIScreen
    options_milo_screen
-   (panels meta movie_panel options_milo_panel options_lower3rd_panel helpbar)
+   (panels options_milo_panel options_lower3rd_panel)
    (focus options_milo_panel)
-   (back options_screen)
+   (back overshell_main_screen)
    (helpbar
       (helpbar_back helpbar_select))
    (player_num -1)
