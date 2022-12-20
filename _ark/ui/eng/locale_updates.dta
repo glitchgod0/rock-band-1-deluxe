@@ -16,6 +16,7 @@
 (nocrowd "No Crowd SFX")
 (os_dxsettings "DELUXE SETTINGS")
 (os_speed "Speed Settings")
+(os_songtitle {sprint "Song Title Always: " {if_else $songtitle "ON" "OFF"}})
 ;;;;;
 (store_cache_name
    "Rock Band Music Store Data")

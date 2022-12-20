@@ -3,13 +3,18 @@
    overshell_lower3rd_panel
    (file
       "practice_lower3rd.milo")}
+#define MODIFIER_DATA
+((os_speed os_songtitle))
 {new
    MultiSelectListPanel
    overshell_main_panel
    (file practice_sel_section.milo)
    (focus sel_section.lst)
    (enter
-      {sel_section.lst set_data (os_speed)}
+      {sel_section.lst set_data MODIFIER_DATA}
+      {if $modifierpos
+         {sel_section.lst set_selected $modifierpos}
+      }
       {title.lbl
          set_localized {localize os_dxsettings}}
       {$this pause_if_local}
@@ -18,9 +23,20 @@
       {bar_07.mesh set_showing FALSE})
    (exit)
    (SELECT_START_MSG
-   {switch {$component selected_sym}
-      (os_speed
-         {ui push_screen options_milo_screen})})
+      {switch {$component selected_sym}
+         (os_songtitle
+            {set $songtitle {! $songtitle}}
+            {set $modifierpos {sel_section.lst selected_sym}}
+            {sel_section.lst set_data MODIFIER_DATA}
+            {if $modifierpos
+               {sel_section.lst set_selected $modifierpos}
+            }
+         )
+         (os_speed
+            {ui push_screen options_milo_screen}
+         )
+      }
+   )
    (SCROLL_MSG)
    (BUTTON_DOWN_MSG
       {if {== $button kPad_Tri}
@@ -29,6 +45,7 @@
             {ui goto_screen splash_screen}
          }
          {ui pop_screen}
+         {set $modifierpos 0}
       }
       kDataUnhandled
       )}
