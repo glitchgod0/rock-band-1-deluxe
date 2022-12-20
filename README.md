@@ -20,19 +20,19 @@ The two exe's are a couple dependencies, [Git for Windows](https://gitforwindows
 Git is required for you to take advantage of auto updating via github pulls. Dot Net is required to build an ARK file, the archive format the game needs to run.
 You can setup git with all default options, same with dot net.
 
-Once the dependencies are installed, run "_init_repo.bat" in an **empty folder**. git will pull the repo and make sure you are completely up to date.
+Once the dependencies are installed, run `_init_repo.bat` in an **empty folder**. git will pull the repo and make sure you are completely up to date.
 
-Copy your base game Rock Band 1 main.hdr and ark files to "_build/Xbox/gen".
+Copy your base game Rock Band 1 main.hdr and ark files to `_build/Xbox/gen`.
 
-From then on simply run "_build_xbox.bat". This script will pull the repo again for updates, and build the ARK for you and spit it out in _build/Xbox
+From then on simply run `_build_xbox.bat`. This script will pull the repo again for updates, and build the ARK for you and spit it out in `_build/Xbox`
 
-Then copy the gen folder and the xex from "_build/xbox/" to the location you have installed Rock Band 1.
+Then copy the gen folder and the xex from `_build/xbox/` to the location you have installed Rock Band 1. Subsequent copies only require `main.hdr` and `main_2.ark` from `_build/Xbox/gen` to be copied
 
 Make sure you clear your system cache.
 
 To clear system cache, navigate to Storage, and press Y to clear the system cache.
 
-If installing for the first time, make sure you rename the vanilla "default.xex" to "default_vanilla.xex" for safety.
+If installing for the first time, make sure you rename the vanilla `default.xex` to `default_vanilla.xex` for safety.
 
 Also make sure to disable any enabled updates for Rock Band 1 in Aurora. Rock Band 1 deluxe rolls TU5 into its base installation.
 
