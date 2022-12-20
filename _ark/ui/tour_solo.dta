@@ -537,6 +537,7 @@
                   {$this update_selection}}}}})
    (exit
       {song_preview ''}
+      {set $didit FALSE}
       {session remove_sink $this})
    (refresh
       {do
@@ -578,7 +579,7 @@
             $venue}
          {tour_world_bg_panel set town $town}
          {tour_world_bg_panel set venue $venue}
-         {tour_world_bg_panel zoom_in}
+         {unless $didit {set $didit TRUE} {tour_world_bg_panel zoom_in}}
          {unless
             {$this is_mode_selected}
             {{tour performer}
@@ -685,6 +686,7 @@
                {{tour performer}
                   event_status}}}
          {$this confirm_event}
+         {set $didit FALSE}
          {do
             ($pcfg
                {game
