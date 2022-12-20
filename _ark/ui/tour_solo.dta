@@ -537,7 +537,6 @@
                   {$this update_selection}}}}})
    (exit
       {song_preview ''}
-      {set $didit FALSE}
       {session remove_sink $this})
    (refresh
       {do
@@ -579,7 +578,7 @@
             $venue}
          {tour_world_bg_panel set town $town}
          {tour_world_bg_panel set venue $venue}
-         {unless $didit {set $didit TRUE} {tour_world_bg_panel zoom_in}}
+         {tour_world_bg_panel zoom_in}
          {unless
             {$this is_mode_selected}
             {{tour performer}
@@ -663,14 +662,15 @@
             download
             {event.lst selected_sym}}})
    (SCROLL_MSG
-      {if
-         {!=
-            {{tour solo_event_provider}
-               town
-               {event.lst selected_pos}}
-            {{tour performer}
-               town}}
-         {synth play bwt_swish.cue}}
+    ;  {if
+    ;    ; {!=
+        ;    {{tour solo_event_provider}
+         ;      town
+         ;      {event.lst selected_pos}}
+          ;  {{tour performer}
+         ;      town}}
+         {synth play bwt_swish.cue}
+         ;}
       {$this update_selection})
    (SELECT_START_MSG
       {if
@@ -686,7 +686,6 @@
                {{tour performer}
                   event_status}}}
          {$this confirm_event}
-         {set $didit FALSE}
          {do
             ($pcfg
                {game
