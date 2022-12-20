@@ -6,6 +6,8 @@
       {==
          {ui current_screen}
          splash_screen}})
+#define OVERSHELL_DISALLOWED_SCREENS
+({'||' {== {ui current_screen} game_screen} {== {ui current_screen} hth_game_screen} {== {ui current_screen} overshell_main_screen} {== {ui current_screen} options_milo_screen}})
 #define G_RED
 (kPad_Tri)
 #define G_YELLOW
@@ -19,7 +21,7 @@
          {profile_mgr unlock_all_songs}
          {ui push_screen unlock_all_screen}}})
 ((kPad_Select kPad_Select)
-   {unless {'||' {== {ui current_screen} game_screen} {== {ui current_screen} hth_game_screen}}
+   {unless OVERSHELL_DISALLOWED_SCREENS
       {do
          {set $modifier_exit {ui current_screen}}
          {ui push_screen overshell_main_screen}}})
