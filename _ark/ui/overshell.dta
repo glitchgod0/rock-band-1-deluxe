@@ -98,7 +98,7 @@
    (focus overshell_gameplay_panel)}
 
 #define VIS_MODIFIER_DATA
-((os_blackbg os_songtitle))
+((os_blackbg os_noflames os_songtitle))
 {new
    MultiSelectListPanel
    overshell_visual_panel
@@ -118,6 +118,11 @@
          )
          (os_blackbg
             {set $blackbg {! $blackbg}}
+            {set $vismodifierpos {sel_section.lst selected_sym}}
+            {$this lst_reset}
+         )
+         (os_noflames
+            {set $noflames {! $noflames}}
             {set $vismodifierpos {sel_section.lst selected_sym}}
             {$this lst_reset}
          )
