@@ -44,6 +44,10 @@
       {{$this loaded_dir}
          reset})
    (on_extend
+   {if $gemcustomtexture
+      {{$this find prism_gems.tex} set_bitmap {sprint "track/gems/prism_gems_" $gem ".png"}}
+   }
+
    {if $noflames
       {do
       {{$this find gem_cap.tex} set_bitmap track/custom_track_textures/_no_highway.png}

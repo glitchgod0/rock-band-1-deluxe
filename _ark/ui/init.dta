@@ -56,6 +56,15 @@
 ;nofail
 {set $nofail FALSE}
 
+;no flames
+{set $noflames FALSE}
+
+;do gem custom textures
+{set $gemcustomtexture FALSE}
+
+;gem texture
+{set $gem "rb1"}
+
 {mixer_panel load}
 {platform_mgr set_notify_ui_location kOSNotifyBottomCenter}
 {set $saveload_skip_upload FALSE}

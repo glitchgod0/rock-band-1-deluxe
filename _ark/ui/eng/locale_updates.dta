@@ -14,6 +14,7 @@
 (os_nofail {sprint "No Fail: " {if_else $nofail "ON" "OFF"}})
 (os_noflames {sprint "No Flames: " {if_else $noflames "ON" "OFF"}})
 (os_nocrowd {sprint "Crowd SFX: " {if_else $nocrowd "OFF" "ON"}})
+(os_gems {sprint "Gems: " $gem})
 (os_dxsettings "DELUXE SETTINGS")
 (os_spd "Speed Modifiers")
 (os_gp "Gameplay Modifiers")
