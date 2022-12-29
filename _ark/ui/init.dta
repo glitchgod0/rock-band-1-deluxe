@@ -65,6 +65,12 @@
 ;gem texture
 {set $gem "rb1"}
 
+;do smasher custom textures
+{set $smashercustomtexture FALSE}
+
+;smasher texture
+{set $smasher "rb1"}
+
 {mixer_panel load}
 {platform_mgr set_notify_ui_location kOSNotifyBottomCenter}
 {set $saveload_skip_upload FALSE}

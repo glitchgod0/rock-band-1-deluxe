@@ -98,7 +98,7 @@
    (focus overshell_gameplay_panel)}
 ;
 #define VIS_MODIFIER_DATA
-((os_gems os_blackbg os_noflames os_songtitle))
+((os_gems os_smashers os_blackbg os_noflames os_songtitle))
 {new
    MultiSelectListPanel
    overshell_visual_panel
@@ -128,6 +128,9 @@
          )
          (os_gems
             {ui push_screen overshell_gems_screen}
+         )
+         (os_smashers
+            {ui push_screen overshell_smashers_screen}
          )
       }
    )
@@ -173,7 +176,6 @@
       {if {== $button kPad_Tri}
          {ui goto_screen overshell_visual_screen}
          {ui pop_screen}
-         {set $vismodifierpos 0}
       }
       kDataUnhandled
       )}
@@ -182,6 +184,37 @@
    overshell_gems_screen
    (panels overshell_gems_panel options_lower3rd_panel)
    (focus overshell_gems_panel)}
+;
+{new
+   MultiSelectListPanel
+   overshell_smashers_panel
+   OVERSHELL_LIST_FILE
+   (enter
+      {sel_section.lst set_data (#include ../track/smashers/smashers.dta)}
+      {title.lbl
+         set_localized {localize "SMASHERS"}}
+      {$this pause_if_local})
+   (exit)
+   (SELECT_START_MSG
+      {set $smashercustomtexture TRUE}
+      {set $smasher {$component selected_sym}}
+      {ui goto_screen overshell_visual_screen}
+      {overshell_visual_panel lst_reset}
+      {ui pop_screen}
+   )
+   (SCROLL_MSG)
+   (BUTTON_DOWN_MSG
+      {if {== $button kPad_Tri}
+         {ui goto_screen overshell_visual_screen}
+         {ui pop_screen}
+      }
+      kDataUnhandled
+      )}
+{new
+   UIScreen
+   overshell_smashers_screen
+   (panels overshell_smashers_panel options_lower3rd_panel)
+   (focus overshell_smashers_panel)}
 ;
 {new
    UIPanel

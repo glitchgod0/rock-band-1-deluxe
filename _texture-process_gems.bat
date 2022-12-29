@@ -1,4 +1,4 @@
-del /f "%~dp0_ark\ui\track\gems\gems.dta"
+del /f "%~dp0_ark\track\gems\gems.dta"
 cd "%~dp0custom_textures\gems"
 forfiles /s /m *.* /C "cmd /e:on /v:on /c set \"Phile=@file\" & if @ISDIR==FALSE ren @file !Phile: =_!"
 forfiles /s /m *.* /C "cmd /e:on /v:on /c set \"Phile=@file\" & if @ISDIR==FALSE  ren @file !Phile:-=_!"
