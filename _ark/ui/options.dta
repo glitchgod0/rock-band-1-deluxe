@@ -54,7 +54,8 @@
          (audio.btn
             {goto_system_option_screen options_audio_screen $player_num})
          (gameplay.btn
-            {ui goto_screen options_gameplay_screen})
+            {options_gameplay_screen set player_num $player_num}
+            {warn_no_signin_goto_screen options_gameplay_screen $player_num})
          (calibrate_av.btn
             {goto_system_option_screen calibrate_av_chooser_screen $player_num})
          (characterdata.btn
