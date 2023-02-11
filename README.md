@@ -6,6 +6,20 @@
 
 This Repo contains everything you need to build an ark for Rock Band 1 Deluxe for Xbox 360.
 
+## Features
+
+### Quality of Life
+* No strum limit executable modification
+* Fast start executable modification
+* Additional intro skip scripting to skip the intro movie
+* "Overshell" - a custom on-screen menu system for changing modifiers, speeds, textures, and more. Opened by pressing `SELECT, SELECT` on most menu screens
+* No Fail Mode modifier
+* Black Venue modifier with decreased load times and system load
+
+### Additional Modifications
+* Nice (69%) and Awesome Choke (98-99%) callouts on solo completion
+* New main menu music pulled from other Rock Band titles
+
 ## Install
 
 NOTE: You WILL need a modded/hacked console to play this mod on console. I hope this is clear
