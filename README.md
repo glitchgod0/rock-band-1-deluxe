@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This Repo contains everything you need to build an ark for Rock Band 1 Deluxe for Xbox 360.
+This Repo contains everything you need to build an ark for Rock Band 1 Deluxe for PS3 or Xbox 360.
 
 ## Features
 
