@@ -6,6 +6,8 @@
 
 This Repo contains everything you need to build an ark for Rock Band 1 Deluxe for PS3 or Xbox 360.
 
+### **WARNING: RB1DX is in a very early stage. Expect bugs and broken things. Also, setup is very different on both platforms compared to the other Deluxe projects.**
+
 ## Features
 
 ### Quality of Life
