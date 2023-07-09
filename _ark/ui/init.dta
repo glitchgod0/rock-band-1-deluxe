@@ -215,7 +215,7 @@ INIT_DTA_READER
 
 {if {== $gem rb2} {set $gem none}}
 
-{if {== $smasher rb2} {set $smasher none}}
+{if {== $smasher rb1} {set $smasher none}}
 
 {if {== $streak rb2} {set $streak none}}
 
