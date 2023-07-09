@@ -9,6 +9,7 @@
    (movie_done
       {ui goto_screen intro_to_splash_screen})
    (enter
+      {ui goto_screen intro_to_splash_screen}
       {platform_mgr disable_xmp}
       kDataUnhandled)
    (BUTTON_DOWN_MSG
@@ -119,7 +120,7 @@
    (attract_timeout_done FALSE)
    (enter
       #ifdef HX_PS3
-      {logo.tex set_bitmap "ui/logo_keep.png"}
+      {logo.tex set_bitmap "ui/splash.png"}
       {$this iterate UILabel $l {$l set_showing FALSE}}
       #endif
       {set
