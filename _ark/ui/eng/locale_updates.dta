@@ -16,6 +16,10 @@
 (nocrowd "No Crowd SFX")
 (os_dxsettings "DELUXE SETTINGS")
 (os_speed "Set Speeds")
+(os_modifiers "Modifiers")
+(os_nofail {sprint "No Fail Mode: " {if_else $nofail "ON" "OFF"}})
+(os_blackbg {sprint "Black Background: " {if_else $blackbg "ON" "OFF"}})
+(os_nocrowd {sprint "No Crowd Audio: " {if_else $nocrowd "ON" "OFF"}})
 ;;;;;
 (store_cache_name
    "Rock Band Music Store Data")

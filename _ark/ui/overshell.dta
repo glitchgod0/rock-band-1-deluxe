@@ -4,13 +4,14 @@
    (file
       "practice_lower3rd.milo")}
 {new
-   MultiSelectListPanel
+   UIPanel
    overshell_main_panel
    (file practice_sel_section.milo)
    (focus sel_section.lst)
    (enter
       {sel_section.lst set_data 
          (
+         os_modifiers
          os_speed
          )
       }
@@ -23,6 +24,9 @@
    (exit)
    (SELECT_START_MSG
    {switch {$component selected_sym}
+      (os_modifiers
+         {ui push_screen overshell_modifiers_screen}
+      )
       (os_speed
          {ui push_screen options_milo_screen}
       )
@@ -44,3 +48,69 @@
    overshell_main_screen
    (panels overshell_main_panel options_lower3rd_panel)
    (focus overshell_main_panel)}
+;
+#define OS_MODIFIERS_DATA
+(
+   (
+   os_nofail
+   os_blackbg
+   os_nocrowd
+   )
+)
+#define MODIFIERS_LST_RESET
+(
+   {set $modifierpos {sel_section.lst selected_sym}}
+   {sel_section.lst set_data OS_MODIFIERS_DATA}
+   {if $modifierpos
+      {sel_section.lst set_selected $modifierpos}
+   }
+)
+{new
+   UIPanel
+   overshell_modifiers_panel
+   (file practice_sel_section.milo)
+   (focus sel_section.lst)
+   (enter
+      {if $modifierpos
+         {sel_section.lst set_selected $modifierpos}
+      }
+      {sel_section.lst set_data (OS_MODIFIERS_DATA)
+      }
+      {title.lbl
+         set_localized {localize os_modifiers}}
+      MODIFIERS_LST_RESET
+      {$this pause_if_local}
+      {bar_05.mesh set_showing FALSE}
+      {bar_06.mesh set_showing FALSE}
+      {bar_07.mesh set_showing FALSE})
+   (exit)
+   (SELECT_START_MSG
+   {switch {$component selected_sym}
+      (os_nofail
+         {set $nofail {! $nofail}}
+         MODIFIERS_LST_RESET)
+      (os_blackbg
+         {set $blackbg {! $blackbg}}
+         MODIFIERS_LST_RESET)
+      (os_nocrowd
+         {set $nocrowd {! $nocrowd}}
+         MODIFIERS_LST_RESET)
+   })
+   (SCROLL_MSG)
+   (BUTTON_DOWN_MSG
+      {if {== $button kPad_Tri}
+         {synth play button_toggle}
+         {if_else {exists $modifier_exit}
+            {ui goto_screen $modifier_exit}
+            {ui goto_screen splash_screen}
+         }
+         {ui pop_screen}
+      }
+      kDataUnhandled
+      )}
+{new
+   UIScreen
+   overshell_modifiers_screen
+   (panels overshell_modifiers_panel options_lower3rd_panel)
+   (focus overshell_modifiers_panel)}
+;

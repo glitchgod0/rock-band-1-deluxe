@@ -365,7 +365,15 @@
       {$this disable sfx.btn}
       {sfx.sld set_showing FALSE}
       {$this disable vocal_options.btn}
-      {vocal_options.btn set_showing FALSE})
+      {vocal_options.btn set_showing FALSE}
+      {$this disable sfx.btn}
+      {sfx.sld set_showing FALSE}
+      {$this disable bass_boost.btn}
+      {bass_boost.btn set_showing FALSE}
+      {$this disable doubly.btn}
+      {doubly.btn set_showing FALSE}
+      {$this disable mono.btn}
+      {mono.btn set_showing FALSE})
    (display_trackspeed_msg
       ($tspd)
       {instruments.btn set_localized {sprintf {localize trackspeed_msg} {int {+ 0.5 {* $tspd 100}}}}})
