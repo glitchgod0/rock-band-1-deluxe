@@ -57,6 +57,7 @@
 (
    (
    os_nofail
+   os_allsongs
    os_blackbg
    os_nocrowd
    )
@@ -92,6 +93,12 @@
    {switch {$component selected_sym}
       (os_nofail
          {set $nofail {! $nofail}}
+         MODIFIERS_LST_RESET)
+      (os_allsongs
+         {unless $dx_allsongs
+            {profile_mgr unlock_all_songs}
+            {ui push_screen unlock_all_screen}}
+         {set $dx_allsongs TRUE}
          MODIFIERS_LST_RESET)
       (os_blackbg
          {set $blackbg {! $blackbg}}
