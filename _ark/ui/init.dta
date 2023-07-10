@@ -214,31 +214,7 @@
 ;{unless {file_exists dx.dta} INIT_DTA_WRITER}
 INIT_DTA_READER
 
-{if {== $gem rb2} {set $gem none}}
-
-{if {== $smasher rb1} {set $smasher none}}
-
-{if {== $streak rb2} {set $streak none}}
-
-;{if {== $spotlight none} {set $spotlight none}}
-
-{if {== $multiring rb1} {set $multiring none}}
-
-{if {== $odbar rb2} {set $odbar none}}
-
-{if {== $rails rb2} {set $rails none}}
-
-{if {== $flames rb2} {set $flames none}}
-
-{if {== $scoretex rb1} {set $scoretex none}}
-
-{if {== $voxarrow rb1} {set $voxarrow none}}
-
-{if {== $voxnotes rb2} {set $voxnotes none}}
-
-{if {== $voxod rb1} {set $voxod none}}
-
-{if {== $voxhw rb1} {set $voxhw none}}
+DX_TEX_RESET_HANDLER
 
 {unless {== $gem none} {set $gemcustomtexture TRUE}}
 

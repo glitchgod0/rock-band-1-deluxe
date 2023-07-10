@@ -1,4 +1,6 @@
 #include macros.dta
+;dx
+#include ../dx/macros/dx_macros.dta
 (mem
    #include mem.dta)
 (content_mgr

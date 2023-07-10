@@ -12,6 +12,7 @@
       {sel_section.lst set_data 
          (
          os_modifiers
+         os_trkthm
          os_speed
          )
       }
@@ -26,6 +27,9 @@
    {switch {$component selected_sym}
       (os_modifiers
          {ui push_screen overshell_modifiers_screen}
+      )
+      (os_trkthm
+         {ui push_screen overshell_trkthm_screen}
       )
       (os_speed
          {ui push_screen options_milo_screen}
@@ -113,4 +117,294 @@
    overshell_modifiers_screen
    (panels overshell_modifiers_panel options_lower3rd_panel)
    (focus overshell_modifiers_panel)}
+;
+#define OS_TRCKTHM_DATA
+(
+   (
+   ;os_tex
+   os_thmreset
+   os_rb2dxthm
+   os_rb1thm
+   os_rb2thm
+   os_rb3thm
+   os_rb4thm
+   os_lrbthm
+   os_tbrbthm
+   )
+)
+#define TRCKTHM_LST_RESET
+(
+   {set $modifierpos {sel_section.lst selected_sym}}
+   {sel_section.lst set_data OS_TRCKTHM_DATA}
+   {if $modifierpos
+      {sel_section.lst set_selected $modifierpos}
+   }
+)
+{new
+   UIPanel
+   overshell_trkthm_panel
+   (file practice_sel_section.milo)
+   (focus sel_section.lst)
+   (enter
+      {if $modifierpos
+         {sel_section.lst set_selected $modifierpos}
+      }
+      {sel_section.lst set_data (OS_MODIFIERS_DATA)
+      }
+      {title.lbl
+         set_localized {localize os_trkthm}}
+      TRCKTHM_LST_RESET
+      {$this pause_if_local}
+      {bar_05.mesh set_showing FALSE}
+      {bar_06.mesh set_showing FALSE}
+      {bar_07.mesh set_showing FALSE})
+   (exit)
+   (SELECT_START_MSG
+   {switch {$component selected_sym}
+      (os_tex
+         {ui goto_screen overshell_tex_screen}
+         TRCKTHM_LST_RESET)
+      (os_thmreset
+         {set $voxhwcustomtexture FALSE}
+         {set $voxhw FALSE}
+         {set $gemcustomtexture FALSE}
+         {set $gem FALSE}
+         {set $smashercustomtexture FALSE}
+         {set $smasher FALSE}
+         {set $voxarrowcustomtexture FALSE}
+         {set $voxarrow FALSE}
+         {set $voxnotescustomtexture FALSE}
+         {set $voxnotes FALSE}
+         {set $voxodcustomtexture FALSE}
+         {set $voxod FALSE}
+         {set $scorecustomtexture FALSE}
+         {set $scoretex FALSE}
+         {set $odbarcustomtexture FALSE}
+         {set $odbar FALSE}
+         {set $railscustomtexture FALSE}
+         {set $rails FALSE}
+         {set $flamescustomtexture FALSE}
+         {set $flames FALSE}
+         {set $multiringcustomtexture FALSE}
+         {set $multiring FALSE}
+         {set $streakcustomtexture FALSE}
+         {set $streak FALSE}
+         {set $spotlightcustomtexture FALSE}
+         {set $spotlight FALSE}
+         TRCKTHM_LST_RESET)
+      (os_rb2dxthm
+         {set $voxhwcustomtexture TRUE}
+         {set $voxhw rb2}
+         {set $gemcustomtexture TRUE}
+         {set $gem rb2dx}
+         {set $smashercustomtexture TRUE}
+         {set $smasher rb2dx}
+         {set $voxarrowcustomtexture TRUE}
+         {set $voxarrow rb2dx}
+         {set $voxnotescustomtexture TRUE}
+         {set $voxnotes rb2dx}
+         {set $voxodcustomtexture TRUE}
+         {set $voxod rb2}
+         {set $scorecustomtexture TRUE}
+         {set $scoretex rb4}
+         {set $odbarcustomtexture TRUE}
+         {set $odbar rb2dx}
+         {set $railscustomtexture TRUE}
+         {set $rails rb2}
+         {set $flamescustomtexture TRUE}
+         {set $flames rb2dx}
+         {set $multiringcustomtexture TRUE}
+         {set $multiring rb1}
+         {set $streakcustomtexture TRUE}
+         {set $streak rb4}
+         {set $spotlightcustomtexture TRUE}
+         {set $spotlight rb4}
+         TRCKTHM_LST_RESET)
+      (os_rb1thm
+         {set $voxhwcustomtexture TRUE}
+         {set $voxhw rb1}
+         {set $gemcustomtexture TRUE}
+         {set $gem rb2}
+         {set $smashercustomtexture TRUE}
+         {set $smasher rb1}
+         {set $voxarrowcustomtexture TRUE}
+         {set $voxarrow rb1}
+         {set $voxnotescustomtexture TRUE}
+         {set $voxnotes rb2}
+         {set $voxodcustomtexture TRUE}
+         {set $voxod rb1}
+         {set $scorecustomtexture TRUE}
+         {set $scoretex rb1}
+         {set $odbarcustomtexture TRUE}
+         {set $odbar rb2}
+         {set $railscustomtexture TRUE}
+         {set $rails rb2}
+         {set $flamescustomtexture TRUE}
+         {set $flames rb2}
+         {set $multiringcustomtexture TRUE}
+         {set $multiring rb1}
+         {set $streakcustomtexture TRUE}
+         {set $streak rb2}
+         {set $spotlightcustomtexture TRUE}
+         {set $spotlight rb1_guitar}
+         TRCKTHM_LST_RESET)
+      (os_rb2thm
+         {set $voxhwcustomtexture TRUE}
+         {set $voxhw rb2}
+         {set $gemcustomtexture TRUE}
+         {set $gem rb2}
+         {set $smashercustomtexture TRUE}
+         {set $smasher rb2}
+         {set $voxarrowcustomtexture TRUE}
+         {set $voxarrow rb2}
+         {set $voxnotescustomtexture TRUE}
+         {set $voxnotes rb2}
+         {set $voxodcustomtexture TRUE}
+         {set $voxod rb2}
+         {set $scorecustomtexture TRUE}
+         {set $scoretex rb2}
+         {set $odbarcustomtexture TRUE}
+         {set $odbar rb2}
+         {set $railscustomtexture TRUE}
+         {set $rails rb2}
+         {set $flamescustomtexture TRUE}
+         {set $flames rb2}
+         {set $multiringcustomtexture TRUE}
+         {set $multiring rb2}
+         {set $streakcustomtexture TRUE}
+         {set $streak rb2}
+         {set $spotlightcustomtexture TRUE}
+         {set $spotlight rb2_guitar}
+         TRCKTHM_LST_RESET)
+      (os_rb3thm
+         {set $voxhwcustomtexture TRUE}
+         {set $voxhw rb3}
+         {set $gemcustomtexture TRUE}
+         {set $gem rb3}
+         {set $smashercustomtexture TRUE}
+         {set $smasher rb3}
+         {set $voxarrowcustomtexture TRUE}
+         {set $voxarrow rb2dx}
+         {set $voxnotescustomtexture TRUE}
+         {set $voxnotes rb2dx}
+         {set $voxodcustomtexture TRUE}
+         {set $voxod rb3}
+         {set $scorecustomtexture TRUE}
+         {set $scoretex rb3}
+         {set $odbarcustomtexture TRUE}
+         {set $odbar rb3}
+         {set $railscustomtexture TRUE}
+         {set $rails rb3}
+         {set $flamescustomtexture TRUE}
+         {set $flames rb3}
+         {set $multiringcustomtexture TRUE}
+         {set $multiring rb3}
+         {set $streakcustomtexture TRUE}
+         {set $streak rb3_guitar}
+         {set $spotlightcustomtexture TRUE}
+         {set $spotlight rb3_guitar}
+         TRCKTHM_LST_RESET)
+      (os_rb4thm
+         {set $voxhwcustomtexture TRUE}
+         {set $voxhw rb3}
+         {set $gemcustomtexture TRUE}
+         {set $gem rb4}
+         {set $smashercustomtexture TRUE}
+         {set $smasher rb4}
+         {set $voxarrowcustomtexture TRUE}
+         {set $voxarrow rb2dx}
+         {set $voxnotescustomtexture TRUE}
+         {set $voxnotes rb2dx}
+         {set $voxodcustomtexture TRUE}
+         {set $voxod rb2}
+         {set $scorecustomtexture TRUE}
+         {set $scoretex rb4}
+         {set $odbarcustomtexture TRUE}
+         {set $odbar rb4}
+         {set $railscustomtexture TRUE}
+         {set $rails rb4}
+         {set $flamescustomtexture TRUE}
+         {set $flames rb4}
+         {set $multiringcustomtexture TRUE}
+         {set $multiring rb4}
+         {set $streakcustomtexture TRUE}
+         {set $streak rb4}
+         {set $spotlightcustomtexture TRUE}
+         {set $spotlight rb4}
+         TRCKTHM_LST_RESET)
+      (os_lrbthm
+         {set $voxhwcustomtexture TRUE}
+         {set $voxhw rb2}
+         {set $gemcustomtexture TRUE}
+         {set $gem rb2}
+         {set $smashercustomtexture TRUE}
+         {set $smasher rb2}
+         {set $voxarrowcustomtexture TRUE}
+         {set $voxarrow rb2}
+         {set $voxnotescustomtexture TRUE}
+         {set $voxnotes rb2}
+         {set $voxodcustomtexture TRUE}
+         {set $voxod lrb}
+         {set $scorecustomtexture TRUE}
+         {set $scoretex rb2}
+         {set $odbarcustomtexture TRUE}
+         {set $odbar lrb}
+         {set $railscustomtexture TRUE}
+         {set $rails rb2}
+         {set $flamescustomtexture TRUE}
+         {set $flames rb2}
+         {set $multiringcustomtexture TRUE}
+         {set $multiring lrb}
+         {set $streakcustomtexture TRUE}
+         {set $streak lrb}
+         {set $spotlightcustomtexture TRUE}
+         {set $spotlight lrb_guitar}
+         TRCKTHM_LST_RESET)
+      (os_tbrbthm
+         {set $trackangle TRUE}
+         {set $voxhwcustomtexture TRUE}
+         {set $voxhw rb3}
+         {set $gemcustomtexture TRUE}
+         {set $gem tbrb}
+         {set $smashercustomtexture TRUE}
+         {set $smasher rb2dx}
+         {set $voxarrowcustomtexture TRUE}
+         {set $voxarrow rb2}
+         {set $voxnotescustomtexture TRUE}
+         {set $voxnotes rb2dx}
+         {set $voxodcustomtexture TRUE}
+         {set $voxod lrb}
+         {set $scorecustomtexture TRUE}
+         {set $scoretex rb4}
+         {set $odbarcustomtexture TRUE}
+         {set $odbar tbrb}
+         {set $railscustomtexture TRUE}
+         {set $rails rb4}
+         {set $flamescustomtexture TRUE}
+         {set $flames rb2dx}
+         {set $multiringcustomtexture TRUE}
+         {set $multiring tbrb}
+         {set $streakcustomtexture TRUE}
+         {set $streak tbrb}
+         {set $spotlightcustomtexture TRUE}
+         {set $spotlight tbrb_guitar}
+         TRCKTHM_LST_RESET)
+   })
+   (SCROLL_MSG)
+   (BUTTON_DOWN_MSG
+      {if {== $button kPad_Tri}
+         {synth play button_toggle}
+         {if_else {exists $modifier_exit}
+            {ui goto_screen $modifier_exit}
+            {ui goto_screen splash_screen}
+         }
+         {ui pop_screen}
+      }
+      kDataUnhandled
+      )}
+{new
+   UIScreen
+   overshell_trkthm_screen
+   (panels overshell_trkthm_panel options_lower3rd_panel)
+   (focus overshell_trkthm_panel)}
 ;

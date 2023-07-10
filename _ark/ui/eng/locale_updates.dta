@@ -20,6 +20,16 @@
 (os_nofail {sprint "No Fail Mode: " {if_else $nofail "ON" "OFF"}})
 (os_blackbg {sprint "Black Background: " {if_else $blackbg "ON" "OFF"}})
 (os_nocrowd {sprint "No Crowd Audio: " {if_else $nocrowd "ON" "OFF"}})
+(os_trkthm "Track Theme")
+(os_tex "[CUSTOMIZE]")
+(os_thmreset "[RESET]")
+(os_rb2dxthm "Rock Band 1 DX")
+(os_rb1thm "Rock Band 1")
+(os_rb2thm "Rock Band 2")
+(os_rb3thm "Rock Band 3")
+(os_rb4thm "Rock Band 4")
+(os_lrbthm "LEGO Rock Band")
+(os_tbrbthm "Beatles Rock Band")
 ;;;;;
 (store_cache_name
    "Rock Band Music Store Data")
