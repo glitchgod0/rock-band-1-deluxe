@@ -1,5 +1,5 @@
 (milosliderlbl
-   "Deluxe Settings")
+   "Speed / Framerate")
 (speed_msg
    "SONG SPEED: %d%%")
 (trackspeed_msg
@@ -14,6 +14,8 @@
 (nofail "No Fail Mode")
 (gameplay_options "Gameplay Options")
 (nocrowd "No Crowd SFX")
+(os_dxsettings "DELUXE SETTINGS")
+(os_speed "Set Speeds")
 ;;;;;
 (store_cache_name
    "Rock Band Music Store Data")

@@ -33,6 +33,7 @@
 #include net_delegator.dta
 #include store.dta
 #include export.dta
+#include overshell.dta
 #ifndef _SHIP
 #include framerate/frame_rate.dta
 #endif
