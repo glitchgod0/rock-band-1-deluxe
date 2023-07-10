@@ -47,14 +47,14 @@
    (file
       "options.milo")
    (focus audio.btn)
-   (enter {gameplay.btn set_localized TWEAKS})
    (SELECT_START_MSG
       {switch
          $component
          (audio.btn
             {goto_system_option_screen options_audio_screen $player_num})
          (gameplay.btn
-            {ui goto_screen options_milo_screen})
+            {options_gameplay_screen set player_num $player_num}
+            {warn_no_signin_goto_screen options_gameplay_screen $player_num})
          (calibrate_av.btn
             {goto_system_option_screen calibrate_av_chooser_screen $player_num})
          (characterdata.btn
@@ -113,7 +113,7 @@
    options_gameplay_screen
    (panels meta movie_panel options_gameplay_panel options_lower3rd_panel helpbar)
    (focus options_gameplay_panel)
-   (back options_milo_screen)
+   (back options_screen)
    (helpbar
       (helpbar_back helpbar_toggleoption))
    (player_num -1)

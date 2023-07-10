@@ -361,10 +361,11 @@
       {gamertag.lbl set_showing FALSE}
       {instrument.lbl set_showing FALSE}
       {audio_options.lbl set_localized {localize milosliderlbl}}
-      {vocal_options.btn set_localized {localize gameplay_options}}
       {sfx.btn set_showing FALSE}
       {$this disable sfx.btn}
-      {sfx.sld set_showing FALSE})
+      {sfx.sld set_showing FALSE}
+      {$this disable vocal_options.btn}
+      {vocal_options.btn set_showing FALSE})
    (display_trackspeed_msg
       ($tspd)
       {instruments.btn set_localized {sprintf {localize trackspeed_msg} {int {+ 0.5 {* $tspd 100}}}}})
