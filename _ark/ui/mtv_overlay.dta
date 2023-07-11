@@ -16,7 +16,7 @@
             kTaskSeconds
             (delay 5)
             (script
-               {$this show_overlay FALSE})}})
+               {$this show_overlay $songtitle})}})
    (exit
       {if
          {exists game}
@@ -62,7 +62,9 @@
       {$this set_showing $show}
       {if_else
          $show
-         {fade.anim animate}
+         {if_else $songtitle
+            {fade.anim set_frame 50}
+            {fade.anim animate}}
          {fade.anim set_frame 0}}
       {$this
          set_paused

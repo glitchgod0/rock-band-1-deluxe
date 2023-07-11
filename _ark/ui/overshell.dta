@@ -58,6 +58,7 @@
    (
    os_nofail
    os_allsongs
+   os_songtitle
    os_blackbg
    os_nocrowd
    )
@@ -99,6 +100,9 @@
             {profile_mgr unlock_all_songs}
             {ui push_screen unlock_all_screen}}
          {set $dx_allsongs TRUE}
+         MODIFIERS_LST_RESET)
+      (os_songtitle
+         {set $songtitle {! $songtitle}}
          MODIFIERS_LST_RESET)
       (os_blackbg
          {set $blackbg {! $blackbg}}

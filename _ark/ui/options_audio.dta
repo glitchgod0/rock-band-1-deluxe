@@ -335,6 +335,7 @@
    (is_loaded
       {content_mgr refresh_done})
    (enter
+      {$this pause_if_local}
       {mono.btn set_showing TRUE}
       {$this enable mono.btn}
       {vocal_options.btn get_local_pos $labelpos_x $labelpos_y $labelpos_z}
