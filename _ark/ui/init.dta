@@ -53,6 +53,9 @@
 ;no venues
 {set $blackbg FALSE}
 
+;song title always
+{set $songtitle FALSE}
+
 ;nofail
 {set $nofail FALSE}
 
@@ -184,11 +187,6 @@
             {elem {find $entry voxhw_texture} 1}
          }
       }
-      {if {== {elem $entry 0} {basename angle_preset}}
-         {set $anglepreset
-            {elem {find $entry angle_preset} 1}
-         }
-      }
       {if {== {elem $entry 0} {basename mod_nofail}}
          {set $nofail
             {elem {find $entry mod_nofail} 1}
@@ -197,6 +195,11 @@
       {if {== {elem $entry 0} {basename mod_blackvenue}}
          {set $blackbg
             {elem {find $entry mod_blackvenue} 1}
+         }
+      }
+      {if {== {elem $entry 0} {basename mod_songtitle}}
+         {set $songtitle
+            {elem {find $entry mod_songtitle} 1}
          }
       }
       {if {== {elem $entry 0} {basename mod_nocrowd}}
@@ -214,7 +217,7 @@
 ;{unless {file_exists dx.dta} INIT_DTA_WRITER}
 INIT_DTA_READER
 
-DX_TEX_RESET_HANDLER
+#ifndef HX_PS3 DX_TEX_RESET_HANDLER #endif
 
 {unless {== $gem none} {set $gemcustomtexture TRUE}}
 
