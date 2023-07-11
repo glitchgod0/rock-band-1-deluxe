@@ -2,6 +2,7 @@
 (1920)
 #define TRACK_PANEL_HANDLERS
 ((enter
+   DX_TRACK_TEXTURE_HANDLER
       {game add_sink $this}
       {$this
          set_showing
@@ -44,8 +45,6 @@
       {{$this loaded_dir}
          reset})
    (on_extend
-   ;   {unless $dx_texloadonce DX_TEXTURE_RESET_HANDLER}
-      DX_TRACK_TEXTURE_HANDLER
       {$this play_intro}
       {if
          {&&
