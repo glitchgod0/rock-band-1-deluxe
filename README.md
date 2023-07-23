@@ -24,7 +24,9 @@ This Repo contains everything you need to build an ark for Rock Band 1 Deluxe fo
 
 ## Downloads
 
-> Unlike other DX projects, Rock Band 1 Deluxe downloads are *not nightly*. This is the current stable build as of `7-23-23`.
+> Unlike other DX projects, Rock Band 1 Deluxe downloads are *not nightly*.
+>
+> This is the current stable build as of `7-23-23`.
 
 ### [Rock Band 1 Deluxe for Xbox 360](https://cdn.discordapp.com/attachments/1052664970925584404/1132804689587601478/RB1DX-Xbox-Stable-7-23-23.zip)
 
