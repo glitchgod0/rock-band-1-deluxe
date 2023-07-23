@@ -200,8 +200,12 @@
          {set $multiring FALSE}
          {set $streakcustomtexture FALSE}
          {set $streak FALSE}
-         {set $spotlightcustomtexture FALSE}
-         {set $spotlight FALSE}
+         {set $spotlightgtrcustomtexture FALSE}
+         {set $spotlightgtr FALSE}
+         {set $spotlightbasscustomtexture FALSE}
+         {set $spotlightbass FALSE}
+         {set $spotlightdrumcustomtexture FALSE}
+         {set $spotlightdrum FALSE}
          TRCKTHM_LST_RESET)
       (os_rb2dxthm
          {set $voxhwcustomtexture TRUE}
@@ -228,8 +232,12 @@
          {set $multiring rb1}
          {set $streakcustomtexture TRUE}
          {set $streak rb4}
-         {set $spotlightcustomtexture TRUE}
-         {set $spotlight rb4}
+         {set $spotlightgtrcustomtexture TRUE}
+         {set $spotlightgtr rb4}
+         {set $spotlightbasscustomtexture TRUE}
+         {set $spotlightbass rb4}
+         {set $spotlightdrumcustomtexture TRUE}
+         {set $spotlightdrum rb4}
          TRCKTHM_LST_RESET)
       (os_rb1thm
          {set $voxhwcustomtexture TRUE}
@@ -256,8 +264,12 @@
          {set $multiring rb1}
          {set $streakcustomtexture TRUE}
          {set $streak rb2}
-         {set $spotlightcustomtexture TRUE}
-         {set $spotlight rb1_guitar}
+         {set $spotlightgtrcustomtexture TRUE}
+         {set $spotlightgtr rb1_guitar}
+         {set $spotlightbasscustomtexture TRUE}
+         {set $spotlightbass rb1_bass}
+         {set $spotlightdrumcustomtexture TRUE}
+         {set $spotlightdrum rb1_drums}
          TRCKTHM_LST_RESET)
       (os_rb2thm
          {set $voxhwcustomtexture TRUE}
@@ -284,8 +296,12 @@
          {set $multiring rb2}
          {set $streakcustomtexture TRUE}
          {set $streak rb2}
-         {set $spotlightcustomtexture TRUE}
-         {set $spotlight rb2_guitar}
+         {set $spotlightgtrcustomtexture TRUE}
+         {set $spotlightgtr rb2_guitar}
+         {set $spotlightbasscustomtexture TRUE}
+         {set $spotlightbass rb2_bass}
+         {set $spotlightdrumcustomtexture TRUE}
+         {set $spotlightdrum rb2_drums}
          TRCKTHM_LST_RESET)
       (os_rb3thm
          {set $voxhwcustomtexture TRUE}
@@ -312,8 +328,12 @@
          {set $multiring rb3}
          {set $streakcustomtexture TRUE}
          {set $streak rb3_guitar}
-         {set $spotlightcustomtexture TRUE}
-         {set $spotlight rb3_guitar}
+         {set $spotlightgtrcustomtexture TRUE}
+         {set $spotlightgtr rb3_guitar}
+         {set $spotlightbasscustomtexture TRUE}
+         {set $spotlightbass rb3_bass}
+         {set $spotlightdrumcustomtexture TRUE}
+         {set $spotlightdrum rb3_drums}
          TRCKTHM_LST_RESET)
       (os_rb4thm
          {set $voxhwcustomtexture TRUE}
@@ -340,8 +360,12 @@
          {set $multiring rb4}
          {set $streakcustomtexture TRUE}
          {set $streak rb4}
-         {set $spotlightcustomtexture TRUE}
-         {set $spotlight rb4}
+         {set $spotlightgtrcustomtexture TRUE}
+         {set $spotlightgtr rb4}
+         {set $spotlightbasscustomtexture TRUE}
+         {set $spotlightbass rb4}
+         {set $spotlightdrumcustomtexture TRUE}
+         {set $spotlightdrum rb4}
          TRCKTHM_LST_RESET)
       (os_lrbthm
          {set $voxhwcustomtexture TRUE}
@@ -368,8 +392,12 @@
          {set $multiring lrb}
          {set $streakcustomtexture TRUE}
          {set $streak lrb}
-         {set $spotlightcustomtexture TRUE}
-         {set $spotlight lrb_guitar}
+         {set $spotlightgtrcustomtexture TRUE}
+         {set $spotlightgtr lrb_guitar}
+         {set $spotlightbasscustomtexture TRUE}
+         {set $spotlightbass lrb_bass}
+         {set $spotlightdrumcustomtexture TRUE}
+         {set $spotlightdrum lrb_drums}
          TRCKTHM_LST_RESET)
       (os_tbrbthm
          {set $trackangle TRUE}
@@ -397,8 +425,12 @@
          {set $multiring tbrb}
          {set $streakcustomtexture TRUE}
          {set $streak tbrb}
-         {set $spotlightcustomtexture TRUE}
-         {set $spotlight tbrb_guitar}
+         {set $spotlightgtrcustomtexture TRUE}
+         {set $spotlightgtr tbrb_guitar}
+         {set $spotlightbasscustomtexture TRUE}
+         {set $spotlightbass tbrb_bass}
+         {set $spotlightdrumcustomtexture TRUE}
+         {set $spotlightdrum tbrb_drums}
          TRCKTHM_LST_RESET)
    })
    (SCROLL_MSG)

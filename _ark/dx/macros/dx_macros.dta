@@ -1,30 +1,34 @@
-#define DX_TEXTURE_RESET_HANDLER
+#define DX_TEX_RESET_HANDLER
 (
-   {if {== $gem rb2} {set $gem none}}
+   {if {== $gem rb2} {set $gem "none"}}
 
-   {if {== $smasher rb1} {set $smasher none}}
+   {if {== $smasher rb1} {set $smasher "none"}}
 
-   {if {== $streak rb2} {set $streak none}}
+   {if {== $streak rb2} {set $streak "none"}}
 
-   ;{if {== $spotlight none} {set $spotlight none}}
+   {if {== $spotlightgtr rb2_guitar} {set $spotlightgtr "none"}}
 
-   {if {== $multiring rb1} {set $multiring none}}
+   {if {== $spotlightbass rb2_bass} {set $spotlightbass "none"}}
 
-   {if {== $odbar rb2} {set $odbar none}}
+   {if {== $spotlightdrum rb2_drums} {set $spotlightdrum "none"}}
 
-   {if {== $rails rb2} {set $rails none}}
+   {if {== $multiring rb1} {set $multiring "none"}}
 
-   {if {== $flames rb2} {set $flames none}}
+   {if {== $odbar rb2} {set $odbar "none"}}
 
-   {if {== $scoretex rb1} {set $scoretex none}}
+   {if {== $rails rb2} {set $rails "none"}}
 
-   {if {== $voxarrow rb1} {set $voxarrow none}}
+   {if {== $flames rb2} {set $flames "none"}}
 
-   {if {== $voxnotes rb2} {set $voxnotes none}}
+   {if {== $scoretex rb1} {set $scoretex "none"}}
 
-   {if {== $voxod rb1} {set $voxod none}}
+   {if {== $voxarrow rb1} {set $voxarrow "none"}}
 
-   {if {== $voxhw rb1} {set $voxhw none}}
+   {if {== $voxnotes rb2} {set $voxnotes "none"}}
+
+   {if {== $voxod rb1} {set $voxod "none"}}
+
+   {if {== $voxhw rb1} {set $voxhw "none"}}
 )
 
 #define DX_TRACK_TEXTURE_HANDLER
@@ -58,6 +62,12 @@
       {{$this find square_smasher_bright_orange.tex} set_bitmap {sprint "track_new/smashers/square_smasher_bright_orange_" $smasher ".png"}}
       {{$this find square_smasher_bright_red.tex} set_bitmap {sprint "track_new/smashers/square_smasher_bright_red_" $smasher ".png"}}
       {{$this find square_smasher_bright_yellow.tex} set_bitmap {sprint "track_new/smashers/square_smasher_bright_yellow_" $smasher ".png"}}
+      {{$this find flare_green.tex} set_bitmap {sprint "track_new/smashers/flare_green_" $smasher ".png"}}
+      {{$this find flare_red.tex} set_bitmap {sprint "track_new/smashers/flare_red_" $smasher ".png"}}
+      {{$this find flare_yellow.tex} set_bitmap {sprint "track_new/smashers/flare_yellow_" $smasher ".png"}}
+      {{$this find flare_blue.tex} set_bitmap {sprint "track_new/smashers/flare_blue_" $smasher ".png"}}
+      {{$this find flare_orange.tex} set_bitmap {sprint "track_new/smashers/flare_orange_" $smasher ".png"}}
+      {{$this find flare_style.tex} set_bitmap {sprint "track_new/smashers/flare_style_" $smasher ".png"}}
    }
    }
 
@@ -65,13 +75,7 @@
       {{$this find radial_shockwave.tex} set_bitmap {sprint "track_new/flames/radial_shockwave_" $flames ".png"}}
       {{$this find radial_shockwave_subtract.tex} set_bitmap {sprint "track_new/flames/radial_shockwave_subtract_" $flames ".png"}}
       {{$this find shockwave.tex} set_bitmap {sprint "track_new/flames/shockwave_" $flames ".png"}}
-      {{$this find flare_green.tex} set_bitmap {sprint "track_new/flames/flare_green_" $flames ".png"}}
-      {{$this find flare_red.tex} set_bitmap {sprint "track_new/flames/flare_red_" $flames ".png"}}
-      {{$this find flare_yellow.tex} set_bitmap {sprint "track_new/flames/flare_yellow_" $flames ".png"}}
-      {{$this find flare_blue.tex} set_bitmap {sprint "track_new/flames/flare_blue_" $flames ".png"}}
-      {{$this find flare_orange.tex} set_bitmap {sprint "track_new/flames/flare_orange_" $flames ".png"}}
       {{$this find flare_orange_kick_smasher.tex} set_bitmap {sprint "track_new/flames/flare_orange_kick_smasher_" $flames ".png"}}
-      {{$this find flare_style.tex} set_bitmap {sprint "track_new/flames/flare_style_" $flames ".png"}}
       {{$this find flare_light_can_star.tex} set_bitmap {sprint "track_new/flames/flare_light_can_star_" $flames ".png"}}
       {{$this find broken_glass01.tex} set_bitmap {sprint "track_new/flames/broken_glass01_" $flames ".png"}}
       {{$this find broken_glass02.tex} set_bitmap {sprint "track_new/flames/broken_glass02_" $flames ".png"}}
@@ -82,6 +86,7 @@
    
    {if $voxarrowcustomtexture
       {{$this find pitch_arrow_split.tex} set_bitmap {sprint "track/voxarrow/pitch_arrow_split_" $voxarrow ".png"}}
+      {{$this find pitch_arrow_effect.tex} set_bitmap {sprint "track/voxarrow/pitch_arrow_effect_" $voxarrow ".png"}}
    }
    
    {if $voxnotescustomtexture
@@ -113,12 +118,12 @@
      {{$this find indv_player_meter_bar.tex} set_bitmap {sprint "track/overdrive_bar/indv_player_meter_bar_" $odbar ".png"}}
    }
 
-   {if $multiringcustomtexture
-      {{$this find multiplier_cap_glass_vox.tex} set_bitmap {sprint "track/multiplier_ring/multiplier_cap_glass_vox_" $multiring ".png"}}
-      {{$this find multiplier_meter_glow.tex} set_bitmap {sprint "track/multiplier_ring/multiplier_meter_glow_" $multiring ".png"}}
-      {{$this find multiplier_meter.tex} set_bitmap {sprint "track/multiplier_ring/multiplier_meter_" $multiring ".png"}}
-      {{$this find multiplier_meter_solid..tex} set_bitmap {sprint "track/multiplier_ring/multiplier_meter_solid_" $multiring ".png"}}
-   }
+   ;{if $multiringcustomtexture
+   ;   {{$this find multiplier_cap_glass_vox.tex} set_bitmap {sprint "track/multiplier_ring/multiplier_cap_glass_vox_" $multiring ".png"}}
+   ;   {{$this find multiplier_meter_glow.tex} set_bitmap {sprint "track/multiplier_ring/multiplier_meter_glow_" $multiring ".png"}}
+   ;   {{$this find multiplier_meter.tex} set_bitmap {sprint "track/multiplier_ring/multiplier_meter_" $multiring ".png"}}
+   ;   {{$this find multiplier_meter_solid..tex} set_bitmap {sprint "track/multiplier_ring/multiplier_meter_solid_" $multiring ".png"}}
+   ;}
 
    {if $streakcustomtexture
       {{$this find bass_superstreak_pattern.tex} set_bitmap {sprint "track_new/streak/" $streak ".png"}}
@@ -129,20 +134,38 @@
       {{$this find rails.tex} iterate_refs $ref {$ref set intensify {!= $rails "rb2"}}}
    }
 
-   {if $spotlightcustomtexture
-      {{$this find spotlight_bass_track.tex} set_bitmap {sprint "track_new/spotlight/" $spotlight ".png"}}
-      {{$this find spotlight_guitar_track.tex} set_bitmap {sprint "track_new/spotlight/" $spotlight ".png"}}
-      {{$this find spotlight_drums_track.tex} set_bitmap {sprint "track_new/spotlight/" $spotlight ".png"}}
-      {if_else {exists {sprint "track_new/spotlight/" $spotlight "_emissive.png"}}
+   {if $spotlightgtrcustomtexture
+      {{$this find spotlight_guitar_track.tex} set_bitmap {sprint "track_new/spotlight/" $spotlightgtr ".png"}}
+      ;{{$this find spotlight_guitar_track.tex} iterate_refs $ref {$ref set color {pack_color 1 0 0}}}
+      ; will implement when im done being lazy
+      {if_else {exists {sprint "track_new/spotlight/" $spotlightgtr "_emissive.png"}}
          {do
-            {{$this find spotlight_bass_track_emissive.tex} set_bitmap {sprint "track_new/spotlight/" $spotlight "_emissive.png"}}
-            {{$this find spotlight_guitar_track_emmissive.tex} set_bitmap {sprint "track_new/spotlight/" $spotlight "_emissive.png"}}
+            {{$this find spotlight_guitar_track_emmissive.tex} set_bitmap {sprint "track_new/spotlight/" $spotlightgtr "_emissive.png"}}
          }
          {do
-            {{$this find spotlight_bass_track_emissive.tex} set_bitmap "track/custom_track_textures/_no_highway.png"}
             {{$this find spotlight_guitar_track_emmissive.tex} set_bitmap "track/custom_track_textures/_no_highway.png"}
          }
       }
+   }
+   
+   {if $spotlightbasscustomtexture
+      {{$this find spotlight_bass_track.tex} set_bitmap {sprint "track_new/spotlight/" $spotlightbass ".png"}}
+      ;{{$this find spotlight_bass_track.tex} iterate_refs $ref {$ref set color {pack_color 1 0 0}}}
+      ; will implement when im done being lazy
+      {if_else {exists {sprint "track_new/spotlight/" $spotlightbass "_emissive.png"}}
+         {do
+            {{$this find spotlight_bass_track_emissive.tex} set_bitmap {sprint "track_new/spotlight/" $spotlightbass "_emissive.png"}}
+         }
+         {do
+            {{$this find spotlight_bass_track_emissive.tex} set_bitmap "track/custom_track_textures/_no_highway.png"}
+         }
+      }
+   }
+   
+   {if $spotlightdrumcustomtexture
+      {{$this find spotlight_drums_track.tex} set_bitmap {sprint "track_new/spotlight/" $spotlightdrum ".png"}}
+      ;{{$this find spotlight_drums_track.tex} iterate_refs $ref {$ref set color {pack_color 1 0 0}}}
+      ; will implement when im done being lazy
    }
 
 ;after all of the queued texture updates are completed, set them to false so they do not run again until a new texture is queued via overshell
@@ -158,6 +181,8 @@
 {set $flamescustomtexture FALSE}
 {set $multiringcustomtexture FALSE}
 {set $streakcustomtexture FALSE}
-{set $spotlightcustomtexture FALSE}
+{set $spotlightgtrcustomtexture FALSE}
+{set $spotlightbasscustomtexture FALSE}
+{set $spotlightdrumcustomtexture FALSE}
 {set $dx_texloadonce TRUE}
 )
