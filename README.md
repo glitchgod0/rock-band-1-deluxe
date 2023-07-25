@@ -26,9 +26,9 @@ This Repo contains everything you need to build an ark for Rock Band 1 Deluxe fo
 >
 > This is the current stable build as of `7-23-23`.
 
-### [Rock Band 1 Deluxe for Xbox 360](https://cdn.discordapp.com/attachments/1052664970925584404/1132804689587601478/RB1DX-Xbox-Stable-7-23-23.zip)
+### [Rock Band 1 Deluxe for Xbox 360](https://drive.google.com/drive/folders/1tEo5QtoA5bAb_7qOZA8rDXuYuWuowunc)
 
-### [Rock Band 1 Deluxe for RPCS3](https://cdn.discordapp.com/attachments/1052664970925584404/1132804690002849862/RB1DX-PS3-Stable-7-23-23.zip)
+### [Rock Band 1 Deluxe for RPCS3](https://drive.google.com/drive/folders/1pcNdRm8A3RV5sBMz2nWNwSK8LH20plQS)
 
 > Does not work on PS3 hardware at the moment, only **360, Xenia, and RPCS3**.
 
