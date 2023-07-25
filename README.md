@@ -20,18 +20,6 @@ This Repo contains everything you need to build an ark for Rock Band 1 Deluxe fo
 * Nice (69%) and Awesome Choke (98-99%) callouts on solo completion
 * New main menu music pulled from other Rock Band titles
 
-## Downloads
-
-> Unlike other DX projects, Rock Band 1 Deluxe downloads are *not nightly*.
->
-> This is the current stable build as of `7-23-23`.
-
-### [Rock Band 1 Deluxe for Xbox 360](https://drive.google.com/drive/folders/1tEo5QtoA5bAb_7qOZA8rDXuYuWuowunc)
-
-### [Rock Band 1 Deluxe for RPCS3](https://drive.google.com/drive/folders/1pcNdRm8A3RV5sBMz2nWNwSK8LH20plQS)
-
-> Does not work on PS3 hardware at the moment, only **360, Xenia, and RPCS3**.
-
 ## Building
 
 NOTE: You WILL need a modded/hacked console to play this mod on console. I hope this is clear
