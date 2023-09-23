@@ -27,8 +27,8 @@
    (inhibit_refresh FALSE)
    (focus ss_song.lst)
    (joypad
-      (hold_ms 500)
-      (repeat_ms 80))
+      (hold_ms 100)
+      (repeat_ms 50))
    (load
       {if
          {!
