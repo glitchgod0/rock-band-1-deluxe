@@ -21,3 +21,5 @@ _xenia/xinput1_3.dll
 _xenia/xinput1_4.dll
 _xenia/xinput9_1_0.dll
 .DS_Store
+_build/Xbox/gen/patch_xbox.hdr
+_build/Xbox/gen/patch_xbox_0.ark
