@@ -1,4 +1,5 @@
 _build/xbox/gen/main*
+!_build/xbox/gen/main.hdr
 _build/ps3/USRDIR/gen/main*
 _xenia/cache/*
 _xenia/xenia.log
